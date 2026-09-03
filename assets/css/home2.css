@@ -1,0 +1,519 @@
+/* ============================================================
+   SUGAR BLOOM ACADEMY — HOME 2 (EDITORIAL MAGAZINE STYLES)
+   ============================================================ */
+
+/* ── 1. Asymmetrical Split Hero ── */
+.h2-hero-section {
+  position: relative;
+  min-height: 88vh;
+  padding-top: calc(var(--navbar-h) + 2rem);
+  background: var(--clr-plum-dark);
+  overflow: hidden;
+}
+
+[data-theme="dark"] .h2-hero-section {
+  background: #140C0C !important;
+}
+
+[data-theme="dark"] .h2-hero-title {
+  color: #FAF6F0 !important;
+}
+
+.h2-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  min-height: calc(100vh - var(--navbar-h));
+  align-items: center;
+}
+
+.h2-hero-left {
+  padding-right: clamp(2rem, 5vw, 5rem);
+  z-index: 2;
+}
+
+.h2-magazine-tag {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--clr-rose);
+  border: none !important;
+  border-bottom: none !important;
+  padding-bottom: 0;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.h2-magazine-tag::after,
+.h2-magazine-tag::before {
+  display: none !important;
+  content: none !important;
+}
+
+.h2-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3.25rem, 6.5vw, 6.5rem);
+  font-weight: 300;
+  line-height: 1.02;
+  color: var(--clr-plum-dark);
+  letter-spacing: -0.03em;
+  margin-bottom: 1.75rem;
+}
+
+.h2-hero-title span {
+  font-family: var(--font-script);
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  color: var(--clr-rose);
+  font-weight: 400;
+  display: block;
+}
+
+.h2-hero-right {
+  position: relative;
+  height: 100%;
+  min-height: 600px;
+}
+
+/* Clip-path reveal container */
+.h2-clip-reveal {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+  overflow: hidden;
+  transition: clip-path 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.h2-clip-reveal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  transition: transform 1.4s var(--ease-smooth);
+}
+
+.h2-clip-reveal.revealed img {
+  transform: scale(1);
+}
+
+/* Floating info tags on hero right */
+.h2-float-tag-1 {
+  position: absolute;
+  top: 15%;
+  left: 2%;
+  background: var(--clr-plum-dark);
+  color: var(--clr-cream);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-lg);
+  font-size: var(--text-xs);
+  box-shadow: var(--shadow-lg);
+  z-index: 10;
+}
+
+.h2-float-tag-2 {
+  position: absolute;
+  bottom: 12%;
+  right: 6%;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--clr-border);
+  padding: 1.25rem 1.75rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+}
+
+/* ── 2. Showcase Portfolio Section (Responsive Viewport Grid) ── */
+.h2-showcase-section {
+  padding: clamp(5rem, 8vw, 8rem) 0;
+  background: var(--clr-cream);
+  overflow: hidden;
+}
+
+.h2-scroll-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 1.5rem !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  padding-bottom: 0 !important;
+}
+
+.h2-scroll-card {
+  width: 100% !important;
+  height: 420px !important;
+  flex: initial !important;
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--dur-base) var(--ease-out), box-shadow var(--dur-base);
+}
+
+.h2-scroll-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+@media (max-width: 1024px) {
+  .h2-scroll-wrapper {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .h2-scroll-wrapper {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.h2-scroll-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-slow) var(--ease-smooth);
+}
+
+.h2-scroll-card:hover img {
+  transform: scale(1.08);
+}
+
+.h2-scroll-caption {
+  position: absolute;
+  bottom: 0;
+  inset-x: 0;
+  padding: 2rem 1.5rem 1.5rem;
+  background: linear-gradient(to top, rgba(30, 15, 15, 0.95) 0%, rgba(30, 15, 15, 0.6) 65%, transparent 100%);
+  color: var(--clr-cream);
+}
+
+/* ── 3. Interactive Craft Tabs ── */
+.h2-tabs-section {
+  padding: clamp(5rem, 9vw, 9rem) 0;
+  background: var(--clr-ivory);
+}
+
+.h2-tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid var(--clr-border);
+  padding-bottom: 1rem;
+}
+
+.h2-tab-btn {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--clr-text-muted);
+  background: none;
+  border: none;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  position: relative;
+  transition: color var(--dur-fast);
+}
+
+.h2-tab-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--clr-rose);
+  transform: scaleX(0);
+  transition: transform var(--dur-base) var(--ease-smooth);
+}
+
+.h2-tab-btn.active {
+  color: var(--clr-plum-dark);
+  font-weight: 600;
+}
+
+.h2-tab-btn.active::after {
+  transform: scaleX(1);
+}
+
+.h2-tab-pane {
+  display: none;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+}
+
+.h2-tab-pane.active {
+  display: grid;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.h2-tab-img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── 4. Numerical Statistics Section ── */
+.h2-stats-section {
+  padding: clamp(5rem, 8vw, 8rem) 0;
+  background: var(--clr-plum-dark);
+  color: var(--clr-cream);
+}
+
+.h2-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  text-align: center;
+}
+
+.h2-stat-num {
+  font-family: var(--font-serif);
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  font-weight: 400;
+  color: #E5C583 !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.h2-stat-label {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #D8C6B8 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ── 5. Editorial Inside the Studio Mosaic ── */
+.h2-studio-section {
+  padding: clamp(5rem, 9vw, 9rem) 0;
+  background: var(--clr-cream);
+}
+
+.h2-mosaic-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: 260px 260px;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.h2-mosaic-item-1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+}
+
+.h2-mosaic-item-2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.h2-mosaic-item-3 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.h2-mosaic-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-slow) var(--ease-smooth);
+}
+
+.h2-mosaic-grid div:hover img {
+  transform: scale(1.06);
+}
+
+/* ── 6. Process Timeline Section ── */
+.h2-process-section {
+  padding: clamp(5rem, 8vw, 8rem) 0;
+  background: var(--clr-ivory);
+}
+
+.h2-process-track {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+  position: relative;
+}
+
+.h2-process-step {
+  background: var(--clr-white);
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--clr-rose);
+  position: relative;
+  transition: transform var(--dur-base);
+}
+
+.h2-process-step:hover {
+  transform: translateY(-6px);
+}
+
+/* ── 7. Before / After Student Transformation ── */
+.h2-transform-section {
+  padding: clamp(5rem, 9vw, 9rem) 0;
+  background: var(--clr-cream);
+}
+
+.h2-ba-container {
+  position: relative;
+  max-width: 960px;
+  margin: 3rem auto 0;
+  height: 520px;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.h2-ba-image-before,
+.h2-ba-image-after {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.h2-ba-image-before img,
+.h2-ba-image-after img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.h2-ba-image-after {
+  width: 50%;
+  overflow: hidden;
+  border-right: 3px solid var(--clr-gold);
+  transition: width 0.1s ease-out;
+}
+
+.h2-ba-slider-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: var(--clr-gold);
+  cursor: ew-resize;
+  z-index: 20;
+}
+
+.h2-ba-handle-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--clr-plum-dark);
+  color: var(--clr-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+}
+
+/* ── 8. Handwritten Editorial Testimonial ── */
+.h2-testimonial-section {
+  padding: clamp(6rem, 10vw, 10rem) 0;
+  background: #FAF3EA;
+  text-align: center;
+}
+
+.h2-quote-script {
+  font-family: var(--font-script);
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  color: var(--clr-rose-deep);
+  line-height: 1.3;
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+}
+
+/* ── 9. Unconventional Organic Circular CTA ── */
+.h2-organic-cta-section {
+  padding: clamp(6rem, 12vw, 12rem) 0;
+  background: var(--clr-plum-dark);
+  color: var(--clr-cream);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h2-circle-cta-blob {
+  width: min(90vw, 560px);
+  height: min(90vw, 560px);
+  border-radius: 53% 47% 52% 48% / 47% 55% 45% 53%; /* Organic blob shape */
+  background: linear-gradient(135deg, #C9856A, #A85C42);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem;
+  box-shadow: 0 30px 90px rgba(201, 133, 106, 0.4);
+  transition: transform var(--dur-slow) var(--ease-spring), border-radius var(--dur-slow);
+}
+
+.h2-circle-cta-blob:hover {
+  transform: scale(1.04) rotate(2deg);
+  border-radius: 48% 52% 45% 55% / 53% 47% 53% 47%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .h2-hero-grid,
+  .h2-tab-pane {
+    grid-template-columns: 1fr;
+  }
+  .h2-clip-reveal {
+    clip-path: none;
+    height: 450px;
+  }
+  .h2-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .h2-mosaic-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .h2-mosaic-item-1,
+  .h2-mosaic-item-2,
+  .h2-mosaic-item-3 {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    height: 300px;
+  }
+  .h2-process-track {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .h2-stats-grid,
+  .h2-process-track {
+    grid-template-columns: 1fr;
+  }
+}

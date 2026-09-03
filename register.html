@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration — Sugar Bloom Academy</title>
+  <link rel="icon" type="image/png" href="assets/images/brand-icon.png">
+  <meta name="description" content="Create your Sugar Bloom Academy student account to enroll in 2026 masterclasses in fondant architecture, sugar flowers, and buttercream art.">
+  
+  <!-- Google Fonts & Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FAF6F0',
+            ivory: '#F5EDE0',
+            blush: '#E8C4B8',
+            rose: '#C9856A',
+            'rose-deep': '#A85C42',
+            plum: '#5C3D3D',
+            'plum-dark': '#3B2424',
+            gold: '#C9A96E',
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Jost', 'sans-serif'],
+            script: ['Great Vibes', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/navbar-footer.css?v=126">
+</head>
+<body class="bg-cream text-plum-dark font-sans antialiased overflow-x-hidden">
+
+  <div class="auth-page">
+    <div class="auth-register-card-layout">
+      
+      <!-- Left Hero Image Pane (Unique Image: auth-register-unique.jpg) -->
+      <div class="auth-hero-pane">
+        <img src="assets/images/auth-register-unique.jpg" alt="Sugar Bloom Academy Studio Atelier" class="auth-hero-img">
+        <div class="auth-hero-overlay"></div>
+        
+        <!-- Header Brand Link -->
+        <a href="index.html" class="navbar-brand relative z-10 inline-flex items-center gap-3">
+          <img src="assets/images/brand-icon.png" alt="Sugar Bloom Logo" class="navbar-logo-img">
+          <div>
+            <span class="navbar-brand-text text-cream">Sugar Bloom</span>
+            <span class="navbar-brand-tagline text-gold">STUDENT REGISTRATION</span>
+          </div>
+        </a>
+
+        <!-- Middle Value Props -->
+        <div class="relative z-10 space-y-5 my-auto py-6">
+          <h2 class="font-serif text-3xl xl:text-4xl font-normal text-cream leading-tight">Begin Your Sugarcraft Mastery</h2>
+          <p class="text-sm text-ivory/80 max-w-md">Join over 1,200 cake artists who have mastered sugar floristry and fondant architecture with our master pastiers.</p>
+          
+          <div class="space-y-3 pt-2">
+            <div class="flex items-center gap-3 text-xs text-ivory font-medium">
+              <span class="w-5 h-5 rounded-full bg-gold/20 border border-gold text-gold flex items-center justify-center font-bold flex-shrink-0">✓</span>
+              <span>Access to 2026 Masterclass Schedule & Curriculums</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs text-ivory font-medium">
+              <span class="w-5 h-5 rounded-full bg-gold/20 border border-gold text-gold flex items-center justify-center font-bold flex-shrink-0">✓</span>
+              <span>Personalized Agboss Workstation Pre-sets & Equipment</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs text-ivory font-medium">
+              <span class="w-5 h-5 rounded-full bg-gold/20 border border-gold text-gold flex items-center justify-center font-bold flex-shrink-0">✓</span>
+              <span>Accredited International Diploma Certificate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Footer Note -->
+        <p class="text-xs text-ivory/70 relative z-10">&copy; 2026 Sugar Bloom Academy. Crafting sweet elegance.</p>
+      </div>
+
+      <!-- Right Registration Form Pane -->
+      <div class="auth-form-pane">
+        <div class="auth-card" data-reveal="fade-up">
+          
+          <!-- Top Bar Navigation -->
+          <div class="flex items-center justify-between mb-6">
+            <a href="index.html" class="inline-flex items-center gap-2 text-xs font-semibold text-rose hover:text-plum-dark transition-colors">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>Back to Atelier</span>
+            </a>
+
+            <div class="nav-actions flex items-center gap-2">
+              <button type="button" class="theme-toggle-btn" aria-label="Switch Theme">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <span>Dark</span>
+              </button>
+              <button type="button" class="rtl-toggle-btn" aria-label="Switch Direction">RTL</button>
+            </div>
+          </div>
+
+          <!-- Brand Logo Header Block -->
+          <a href="index.html" class="navbar-brand inline-flex items-center gap-3 mb-6 group" title="Return to Sugar Bloom Home Page">
+            <img src="assets/images/brand-icon.png" alt="Sugar Bloom Logo" class="navbar-logo-img group-hover:scale-105 transition-transform">
+            <div>
+              <span class="navbar-brand-text text-plum-dark dark:text-cream text-2xl font-serif font-semibold block leading-tight">Sugar Bloom</span>
+              <span class="navbar-brand-tagline text-gold text-[10px] uppercase tracking-widest font-semibold block">SUGARCRAFT ACADEMY</span>
+            </div>
+          </a>
+
+          <h1 class="font-serif text-3xl sm:text-4xl font-semibold text-plum-dark mb-2">Join the Atelier</h1>
+          <p class="body-xs text-muted mb-6">Create your student account to reserve workstations and access course files.</p>
+
+          <form id="register-form" novalidate>
+            
+            <!-- Full Name -->
+            <div class="form-group mb-4">
+              <label for="reg-name" class="form-label">Full Name</label>
+              <input type="text" id="reg-name" class="form-control" placeholder="Chef Victoria Sterling" required>
+            </div>
+
+            <!-- Email & Phone Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+              <div class="form-group">
+                <label for="reg-email" class="form-label">Email Address</label>
+                <input type="email" id="reg-email" class="form-control" placeholder="victoria@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="reg-phone" class="form-label">Phone Number</label>
+                <input type="tel" id="reg-phone" class="form-control" placeholder="+1 (555) 000-0000" required>
+              </div>
+            </div>
+
+            <!-- Skill Level Selection -->
+            <div class="form-group mb-4">
+              <label for="reg-level" class="form-label">Workshop Skill Level</label>
+              <select id="reg-level" class="form-control cursor-pointer">
+                <option value="beginner">Beginner — First Time Baker</option>
+                <option value="intermediate">Intermediate — Home Baker & Hobbyist</option>
+                <option value="advanced">Advanced — Custom Cake Decorator</option>
+                <option value="professional">Professional — Bakery Owner / Pastry Chef</option>
+              </select>
+            </div>
+
+            <!-- Password with Eye Toggle -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+              <div class="form-group">
+                <label for="reg-password" class="form-label">Password</label>
+                <div class="relative">
+                  <input type="password" id="reg-password" class="form-control pr-10" placeholder="Minimum 8 chars" required>
+                  <button type="button" class="password-toggle-btn absolute right-3 top-1/2 -translate-y-1/2 text-muted hover:text-plum-dark" aria-label="Toggle password visibility" data-target="reg-password">
+                    <svg class="eye-icon w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="reg-confirm-password" class="form-label">Confirm Password</label>
+                <div class="relative">
+                  <input type="password" id="reg-confirm-password" class="form-control pr-10" placeholder="Re-enter password" required>
+                  <button type="button" class="password-toggle-btn absolute right-3 top-1/2 -translate-y-1/2 text-muted hover:text-plum-dark" aria-label="Toggle password visibility" data-target="reg-confirm-password">
+                    <svg class="eye-icon w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Terms Checkbox -->
+            <div class="flex items-center mb-6">
+              <input type="checkbox" id="terms-agree" class="rounded border-border text-rose focus:ring-rose mr-2 cursor-pointer" required>
+              <label for="terms-agree" class="text-xs text-muted cursor-pointer select-none">I agree to the <a href="#" class="text-rose underline">Terms of Enrollment</a> & <a href="#" class="text-rose underline">Privacy Policy</a></label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg w-full flex items-center justify-center gap-2">
+              <span>Create Atelier Account</span>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+
+          </form>
+
+          <div class="mt-8 pt-6 border-t border-border text-center">
+            <p class="text-xs text-muted">
+              Already registered?
+              <a href="login.html" class="font-semibold text-rose hover:underline">Sign in to your account</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const regForm = document.getElementById('register-form');
+      if (regForm) {
+        regForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('reg-name').value.trim();
+          const email = document.getElementById('reg-email').value.trim();
+          const phone = document.getElementById('reg-phone').value.trim();
+          const pass = document.getElementById('reg-password').value.trim();
+          const confirmPass = document.getElementById('reg-confirm-password').value.trim();
+          const terms = document.getElementById('terms-agree').checked;
+
+          if (!name || !email || !phone || !pass || !confirmPass) {
+            showNotification('Please fill out all required registration fields.', 'error');
+            return;
+          }
+
+          if (pass !== confirmPass) {
+            showNotification('Passwords do not match. Please verify.', 'error');
+            return;
+          }
+
+          if (!terms) {
+            showNotification('Please agree to the Terms of Enrollment to proceed.', 'error');
+            return;
+          }
+
+          const btn = regForm.querySelector('button[type="submit"]');
+          btn.disabled = true;
+          btn.innerHTML = `
+            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            Creating Account...
+          `;
+
+          setTimeout(() => {
+            btn.disabled = false;
+            showNotification('Account created successfully! Welcome to Sugar Bloom Academy. Redirecting...', 'success');
+            setTimeout(() => {
+              window.location.href = 'index.html';
+            }, 1200);
+          }, 1200);
+        });
+      }
+
+      function showNotification(msg, type) {
+        const container = document.getElementById('form-notification-container');
+        if (!container) return;
+        container.innerHTML = `
+          <div class="p-4 rounded-xl text-xs font-semibold mb-4 ${type === 'error' ? 'bg-red-100 text-red-800 border border-red-200' : 'bg-emerald-100 text-emerald-800 border border-emerald-200'}">
+            ${msg}
+          </div>
+        `;
+      }
+    });
+  </script>
+</body>
+</html>

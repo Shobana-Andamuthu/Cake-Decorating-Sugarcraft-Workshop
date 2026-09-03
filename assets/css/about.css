@@ -1,0 +1,309 @@
+/* ============================================================
+   SUGAR BLOOM ACADEMY — ABOUT PAGE STYLES
+   ============================================================ */
+
+/* ── 1. Hero Section ── */
+.abt-hero-section {
+  padding-top: calc(var(--navbar-h) + 4rem);
+  padding-bottom: clamp(4rem, 8vw, 8rem);
+  background: var(--clr-plum-dark);
+  color: var(--clr-cream);
+  overflow: hidden;
+}
+
+.abt-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+
+/* ── 2. Brand Story Section ── */
+.abt-story-section {
+  padding: clamp(5rem, 8vw, 8rem) 0;
+  background: var(--clr-cream);
+}
+
+.abt-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+
+/* ── 3. Timeline Section ── */
+.abt-timeline-section {
+  padding: clamp(5rem, 8vw, 8rem) 0;
+  background: var(--clr-ivory);
+}
+
+.abt-timeline-wrapper {
+  position: relative;
+  max-width: 840px;
+  margin: 3.5rem auto 0;
+}
+
+.abt-timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--clr-gold);
+  transform: translateX(-50%);
+}
+
+.abt-timeline-item {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.abt-timeline-item:nth-child(even) {
+  justify-content: flex-end;
+}
+
+.abt-timeline-content {
+  width: 42%;
+  background: var(--clr-cream);
+  border-radius: var(--radius-xl);
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--clr-border);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: transform var(--dur-fast), border-color var(--dur-fast), box-shadow var(--dur-fast);
+}
+
+.abt-timeline-content:hover {
+  transform: translateY(-3px);
+  border-color: var(--clr-gold);
+  box-shadow: var(--shadow-md);
+}
+
+.abt-timeline-node {
+  position: absolute;
+  left: 50%;
+  top: 1.5rem;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  background: var(--clr-gold);
+  border: 3px solid var(--clr-cream);
+  box-shadow: 0 0 0 2px var(--clr-gold);
+  z-index: 10;
+}
+
+/* ── 4. Meet the Instructors (Editorial Portraits, NO Cards) ── */
+.abt-instructors-section {
+  padding: clamp(5rem, 8vw, 8rem) 0;
+  background: var(--clr-cream);
+}
+
+.abt-instructor-row {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.abt-instructor-row:last-child {
+  border-bottom: none;
+}
+
+.abt-instructor-row:nth-child(even) {
+  grid-template-columns: 1fr 360px;
+}
+
+.abt-instructor-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover !important;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.abt-inst-1-img {
+  object-position: 50% 15% !important;
+}
+.abt-inst-2-img {
+  object-position: 50% 40% !important;
+}
+.abt-inst-3-img {
+  object-position: 50% 50% !important;
+}
+
+/* ── 5. Workshop Philosophy ── */
+.abt-philosophy-banner {
+  padding: clamp(6rem, 10vw, 10rem) 0;
+  background: var(--clr-plum-dark);
+  color: var(--clr-cream);
+  text-align: center;
+}
+
+/* ── 6. Studio Core Values ── */
+.abt-values-section {
+  padding: clamp(5rem, 8vw, 8rem) 0;
+  background: var(--clr-ivory);
+}
+
+.abt-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.abt-value-item {
+  background: var(--clr-cream);
+  border-radius: var(--radius-2xl);
+  padding: 1.75rem;
+  border: 1px solid var(--clr-border);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur-fast) var(--ease-smooth), box-shadow var(--dur-fast), border-color var(--dur-fast);
+}
+
+.abt-value-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--clr-gold);
+}
+
+.abt-value-num {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--clr-gold);
+  line-height: 1;
+}
+
+/* ── 7. Studio Atmosphere Image Collage ── */
+.abt-collage-section {
+  padding: clamp(5rem, 8vw, 8rem) 0;
+  background: var(--clr-cream);
+}
+
+.abt-collage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 240px;
+  gap: 1.25rem;
+  max-width: 1100px;
+  margin: 3.5rem auto 0;
+}
+
+.abt-collage-img-1 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.abt-collage-img-2 {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.abt-collage-img-3 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.abt-collage-img-4 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.abt-collage-item {
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.abt-collage-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-normal) var(--ease-smooth);
+}
+
+.abt-collage-item:hover img {
+  transform: scale(1.06);
+}
+
+/* ── 8. Final CTA ── */
+.abt-cta-banner {
+  position: relative;
+  padding: clamp(5rem, 9vw, 9rem) 0;
+  background: var(--clr-plum-dark);
+  color: var(--clr-cream);
+  text-align: center;
+  overflow: hidden;
+}
+
+.abt-cta-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+}
+
+/* Responsive breakdowns */
+@media (max-width: 1024px) {
+  .abt-hero-grid,
+  .abt-story-grid {
+    grid-template-columns: 1fr;
+  }
+  .abt-instructor-row,
+  .abt-instructor-row:nth-child(even) {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+  .abt-instructor-row:nth-child(even) .abt-instructor-img {
+    order: -1;
+  }
+  .abt-instructor-img {
+    width: 100% !important;
+    max-width: 640px !important;
+    margin: 0 auto !important;
+    height: clamp(300px, 40vh, 380px) !important;
+    object-fit: cover !important;
+  }
+  .abt-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .abt-timeline-line {
+    left: 20px;
+  }
+  .abt-timeline-node {
+    left: 20px;
+  }
+  .abt-timeline-item,
+  .abt-timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-left: 50px;
+  }
+  .abt-timeline-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .abt-values-grid {
+    grid-template-columns: 1fr;
+  }
+  .abt-collage-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 240px;
+  }
+  .abt-collage-img-1,
+  .abt-collage-img-2,
+  .abt-collage-img-3,
+  .abt-collage-img-4 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}

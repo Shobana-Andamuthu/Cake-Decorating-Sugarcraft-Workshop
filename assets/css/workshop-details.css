@@ -1,0 +1,296 @@
+/* ============================================================
+   SUGAR BLOOM ACADEMY — WORKSHOP DETAILS PAGE STYLES
+   ============================================================ */
+
+/* ── 1. Hero Section (Asymmetrical Split & Arch Frame) ── */
+.wd-hero-section {
+  padding-top: calc(var(--navbar-h) + 2rem);
+  padding-bottom: clamp(4rem, 7vw, 7rem);
+  background: var(--clr-cream);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.wd-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.wd-arch-frame {
+  position: relative;
+  height: 520px;
+  border-radius: 200px 200px var(--radius-2xl) var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 4px solid var(--clr-ivory);
+}
+
+.wd-arch-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wd-badge-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ── 2. "What You'll Learn" Editorial Layout ── */
+.wd-learn-section {
+  padding: clamp(5rem, 9vw, 9rem) 0;
+  background: var(--clr-ivory);
+}
+
+.wd-learn-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.wd-module-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.wd-module-item {
+  padding: 1.5rem;
+  background: var(--clr-cream);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--clr-border);
+  border-left: 4px solid var(--clr-rose);
+  transition: transform var(--dur-base), border-color var(--dur-base);
+}
+
+.wd-module-item:hover {
+  transform: translateX(6px);
+  border-color: var(--clr-gold);
+}
+
+/* ── 3. Visual Step-by-Step Learning Journey ── */
+.wd-journey-section {
+  padding: clamp(5rem, 9vw, 9rem) 0;
+  background: var(--clr-plum-dark);
+  color: var(--clr-cream);
+}
+
+.wd-journey-track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.wd-progress-line {
+  position: absolute;
+  top: 28px;
+  left: 5%;
+  width: 90%;
+  height: 2px;
+  background: rgba(201, 169, 110, 0.25);
+  z-index: 1;
+}
+
+.wd-progress-line-fill {
+  height: 100%;
+  width: 75%;
+  background: var(--clr-gold);
+  box-shadow: 0 0 12px var(--clr-gold);
+  transition: width 1.5s ease-out;
+}
+
+.wd-journey-step {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.wd-journey-number {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background: var(--clr-plum-dark);
+  border: 2px solid var(--clr-gold);
+  color: var(--clr-gold);
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  box-shadow: 0 0 16px rgba(59, 36, 36, 0.8);
+}
+
+/* ── 4. Tools & Techniques Included (Icon & Typography Grid, NO Cards) ── */
+.wd-tools-section {
+  padding: clamp(5rem, 8vw, 8rem) 0;
+  background: var(--clr-cream);
+}
+
+.wd-tools-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-top: 3.5rem;
+}
+
+.wd-tool-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.wd-tool-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-lg);
+  background: rgba(201, 133, 106, 0.12);
+  color: var(--clr-rose-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── 5. Student Outcome Section ── */
+.wd-outcome-section {
+  padding: clamp(5rem, 9vw, 9rem) 0;
+  background: var(--clr-ivory);
+}
+
+.wd-outcome-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 3.5rem;
+}
+
+.wd-outcome-card {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.wd-outcome-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform var(--dur-slow) var(--ease-smooth);
+}
+
+.wd-outcome-card:hover img {
+  transform: scale(1.06);
+}
+
+.wd-outcome-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(59, 36, 36, 0.85) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  color: var(--clr-cream);
+}
+
+/* ── 6. Instructor Note ── */
+.wd-instructor-section {
+  padding: clamp(5rem, 8vw, 8rem) 0;
+  background: var(--clr-cream);
+}
+
+.wd-instructor-box {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  background: var(--clr-ivory);
+  border-radius: var(--radius-2xl);
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border: 1px solid var(--clr-border);
+}
+
+.wd-instructor-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--clr-gold);
+}
+
+/* ── 7. Workshop Information & Key Facts ── */
+.wd-facts-section {
+  padding: clamp(4rem, 7vw, 7rem) 0;
+  background: var(--clr-ivory);
+}
+
+.wd-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  background: var(--clr-cream);
+  padding: 2.5rem;
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--clr-border);
+  box-shadow: var(--shadow-md);
+}
+
+/* ── 8. Enrollment CTA ── */
+.wd-enrollment-section {
+  padding: clamp(6rem, 10vw, 10rem) 0;
+  background: var(--clr-plum-dark);
+  color: var(--clr-cream);
+}
+
+.wd-booking-box {
+  max-width: 840px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--clr-gold);
+  border-radius: var(--radius-2xl);
+  padding: clamp(3rem, 6vw, 4.5rem);
+  text-align: center;
+  box-shadow: var(--shadow-2xl);
+}
+
+/* Responsive breakdowns */
+@media (max-width: 1024px) {
+  .wd-hero-grid,
+  .wd-learn-grid,
+  .wd-instructor-box,
+  .wd-outcome-grid {
+    grid-template-columns: 1fr;
+  }
+  .wd-journey-track {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .wd-progress-line {
+    display: none;
+  }
+  .wd-facts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .wd-tools-list,
+  .wd-facts-grid {
+    grid-template-columns: 1fr;
+  }
+  .wd-arch-frame {
+    height: 380px;
+  }
+}

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshops & Masterclasses — Sugar Bloom Academy | Sugarcraft Workshop</title>
+  <link rel="icon" type="image/png" href="assets/images/brand-icon.png">
+  <meta name="description" content="Explore master workshops in fondant sculpting, buttercream painting, botanical sugar flower piping, and wedding cake architecture at Sugar Bloom Academy.">
+  
+  <!-- Google Fonts & Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FAF6F0',
+            ivory: '#F5EDE0',
+            blush: '#E8C4B8',
+            rose: '#C9856A',
+            'rose-deep': '#A85C42',
+            plum: '#5C3D3D',
+            'plum-dark': '#3B2424',
+            gold: '#C9A96E',
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Jost', 'sans-serif'],
+            script: ['Great Vibes', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/navbar-footer.css">
+  <link rel="stylesheet" href="assets/css/workshops.css">
+</head>
+<body class="bg-cream text-plum-dark font-sans antialiased overflow-x-hidden">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="site-navbar transparent">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" id="nav-brand">
+        <img src="assets/images/brand-icon.png" alt="Sugar Bloom Academy Logo" class="navbar-logo-img">
+        <div>
+          <span class="navbar-brand-text text-cream">Sugar Bloom</span>
+          <span class="navbar-brand-tagline text-gold">Master Curriculum</span>
+        </div>
+      </a>
+
+      <nav class="navbar-nav" id="desktop-nav">
+        <div class="nav-dropdown-wrap">
+          <button type="button" class="nav-link nav-dropdown-btn text-cream hover:text-gold">
+            <span>Home</span>
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="nav-dropdown-item">Home 1 (Art Atelier)</a>
+            <a href="home-2.html" class="nav-dropdown-item">Home 2 (Editorial Journal)</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link text-cream hover:text-gold">About</a>
+        <a href="workshops.html" class="nav-link active">Workshops</a>
+        <a href="schedule.html" class="nav-link text-cream hover:text-gold">Schedule</a>
+        <a href="tools.html" class="nav-link text-cream hover:text-gold">Tools & Materials</a>
+        <a href="gallery.html" class="nav-link text-cream hover:text-gold">Gallery</a>
+        <a href="contact.html" class="nav-link text-cream hover:text-gold">Contact</a>
+      </nav>
+
+      <div class="nav-actions flex items-center gap-2">
+        <button type="button" class="theme-toggle-btn" aria-label="Switch Theme">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <span>Dark</span>
+        </button>
+        <button type="button" class="rtl-toggle-btn" aria-label="Switch Direction">RTL</button>
+        <a href="register.html" class="btn btn-primary btn-sm hidden sm:inline-flex" id="nav-register-btn">Enroll Now</a>
+        <button class="mobile-menu-toggle text-cream" aria-label="Toggle navigation menu" id="mobile-toggle-btn">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-overlay"></div>
+    <div class="drawer-content">
+      <div>
+        <div class="drawer-header">
+          <div class="drawer-brand-wrap">
+            <img src="assets/images/brand-icon.png" alt="Sugar Bloom Logo" class="w-8 h-8 rounded-full object-cover border border-gold shrink-0">
+            <span class="drawer-brand-text">Sugar Bloom</span>
+          </div>
+          <div class="drawer-controls-wrap">
+            <button type="button" class="theme-toggle-btn" aria-label="Switch Theme">Dark</button>
+            <button type="button" class="rtl-toggle-btn" aria-label="Switch Direction">RTL</button>
+            <button class="drawer-close" aria-label="Close menu">&times;</button>
+          </div>
+        </div>
+
+        <nav class="drawer-nav">
+          <div class="drawer-dropdown-wrap">
+            <button type="button" class="drawer-link drawer-dropdown-btn flex items-center justify-between w-full">
+              <span>Home</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="drawer-dropdown-menu">
+              <a href="index.html" class="drawer-sublink">Home 1 (Art Atelier)</a>
+              <a href="home-2.html" class="drawer-sublink">Home 2 (Editorial Journal)</a>
+            </div>
+          </div>
+          <a href="about.html" class="drawer-link">About</a>
+          <a href="workshops.html" class="drawer-link active">Workshops</a>
+          <a href="schedule.html" class="drawer-link">Schedule</a>
+          <a href="tools.html" class="drawer-link">Tools & Materials</a>
+          <a href="gallery.html" class="drawer-link">Gallery</a>
+          <a href="contact.html" class="drawer-link">Contact</a>
+          <a href="login.html" class="drawer-link">Login</a>
+          <a href="register.html" class="drawer-link">Register</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-border text-center">
+        <a href="register.html" class="btn btn-primary w-full text-center">Enroll in Workshop</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= SECTION 1: NARROW CINEMATIC HERO BANNER ================= -->
+    <section class="ws-hero-banner">
+      <img src="assets/images/ws-hero-new.png" alt="Sugarcraft baking studio workbench" class="ws-hero-bg">
+      <div class="container">
+        <div class="ws-hero-content" data-reveal="fade-right">
+          <nav class="ws-breadcrumb">
+            <a href="index.html">Sugar Bloom</a>
+            <span>/</span>
+            <a href="about.html">Atelier</a>
+            <span>/</span>
+            <span class="text-gold font-semibold">Workshops</span>
+          </nav>
+          
+          <h1 class="font-serif text-4xl sm:text-6xl text-white font-normal mb-4 leading-tight">
+            Master Workshops & Diplomas
+          </h1>
+          
+          <p class="body-lg text-ivory/90 max-w-xl">
+            Hands-on intensive masterclasses designed for aspiring boutique bakers, pastry chefs, and wedding cake artists seeking uncompromising craft execution.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2: INTRODUCTORY EDITORIAL ================= -->
+    <section class="ws-intro-section">
+      <div class="container">
+        <div class="ws-intro-grid">
+          
+          <div data-reveal="fade-right">
+            <span class="overline">Curriculum Philosophy</span>
+            <h2 class="heading-1 text-plum-dark mt-2">
+              Choose Your Creative Discipline
+            </h2>
+          </div>
+
+          <div data-reveal="fade-left">
+            <p class="body-lg text-muted mb-4">
+              At Sugar Bloom Academy, we divide our master curriculum into four rigorous artistic disciplines. Each workshop is structured around small 8-student cohorts to ensure individual workstation guidance.
+            </p>
+            <p class="body-sm text-muted">
+              Whether you are taking your first steps in buttercream palette painting or engineering 5-tier grand wedding cakes, our master instructors teach the underlying structural science and aesthetic principles behind every swirl.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3: INTERACTIVE FILTER & EDITORIAL LIST ================= -->
+    <section class="ws-filter-section" id="workshop-list">
+      <div class="container">
+        
+        <!-- Filter Controls -->
+        <div class="ws-filter-bar" data-reveal="fade-up">
+          <button class="ws-filter-pill active" data-filter="all">All Workshops</button>
+          <button class="ws-filter-pill" data-filter="fondant">Fondant</button>
+          <button class="ws-filter-pill" data-filter="buttercream">Buttercream</button>
+          <button class="ws-filter-pill" data-filter="floral piping">Floral Piping</button>
+          <button class="ws-filter-pill" data-filter="wedding cakes">Wedding Cakes</button>
+          <button class="ws-filter-pill" data-filter="beginner">Beginner</button>
+          <button class="ws-filter-pill" data-filter="intermediate">Intermediate</button>
+          <button class="ws-filter-pill" data-filter="advanced">Advanced</button>
+        </div>
+
+        <!-- Editorial Workshop List Layout (NOT cards) -->
+        <div class="ws-editorial-list">
+          
+          <!-- Row 1: Buttercream -->
+          <article class="ws-list-item" data-category="buttercream" data-level="beginner" data-reveal="fade-up">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <span class="badge badge-rose">Buttercream</span>
+                <span class="badge badge-gold">Beginner Level</span>
+                <span class="text-xs font-semibold text-muted uppercase tracking-wider">2 Days • 12 Hours</span>
+              </div>
+              <h3 class="font-serif text-3xl text-plum-dark font-medium mb-3">Foundations of Palette Knife Buttercream</h3>
+              <p class="body-sm text-muted mb-6">
+                Master Swiss meringue temperature control, color palette theory, and impasto palette knife strokes to paint oil-canvas style florals directly onto smooth cake surfaces.
+              </p>
+              <div class="flex items-center gap-6">
+                <a href="schedule.html?course=buttercream-1" class="btn btn-primary btn-sm">View Schedule & Enroll</a>
+                <span class="text-xs text-muted font-medium">Max 8 Students Per Cohort</span>
+              </div>
+            </div>
+
+            <div class="ws-img-frame">
+              <img src="assets/images/ws-palette-knife-unique.jpg" alt="Palette knife buttercream floral artwork">
+            </div>
+          </article>
+
+          <!-- Row 2: Fondant -->
+          <article class="ws-list-item" data-category="fondant" data-level="intermediate" data-reveal="fade-up" data-reveal-delay="100">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <span class="badge badge-gold">Fondant</span>
+                <span class="badge badge-rose">Intermediate Level</span>
+                <span class="text-xs font-semibold text-muted uppercase tracking-wider">3 Days • 18 Hours</span>
+              </div>
+              <h3 class="font-serif text-3xl text-plum-dark font-medium mb-3">Sharp Edge Fondant & Ganache Smooth</h3>
+              <p class="body-sm text-muted mb-6">
+                Achieve razor-sharp 90-degree cake edges using acrylic plate methods, seamless fondant draping without air bubbles, and 24K gold foil gilding techniques.
+              </p>
+              <div class="flex items-center gap-6">
+                <a href="schedule.html?course=fondant-2" class="btn btn-primary btn-sm">View Schedule & Enroll</a>
+                <span class="text-xs text-muted font-medium">Tools Included in Tuition</span>
+              </div>
+            </div>
+
+            <div class="ws-img-frame">
+              <img src="assets/images/ws-list-2-new.png" alt="Sharp edge fondant cake smoothing">
+            </div>
+          </article>
+
+          <!-- Row 3: Floral Piping -->
+          <article class="ws-list-item" data-category="floral piping" data-level="intermediate" data-reveal="fade-up" data-reveal-delay="200">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <span class="badge badge-rose">Floral Piping</span>
+                <span class="badge badge-rose">Intermediate Level</span>
+                <span class="text-xs font-semibold text-muted uppercase tracking-wider">2 Days • 14 Hours</span>
+              </div>
+              <h3 class="font-serif text-3xl text-plum-dark font-medium mb-3">Botanical Wired Sugar Peonies & Roses</h3>
+              <p class="body-sm text-muted mb-6">
+                Sculpt lifelike English garden roses and gumpaste peonies with realistic petal dusting, wire stem assembly, and dramatic cake arrangement mounting.
+              </p>
+              <div class="flex items-center gap-6">
+                <a href="schedule.html?course=piping-2" class="btn btn-primary btn-sm">View Schedule & Enroll</a>
+                <span class="text-xs text-muted font-medium">Includes Take-Home Mold Kit</span>
+              </div>
+            </div>
+
+            <div class="ws-img-frame">
+              <img src="assets/images/gal-2-new.jpg" alt="Botanical wired sugar peonies and roses luxury tier cake">
+            </div>
+          </article>
+
+          <!-- Row 4: Wedding Cakes -->
+          <article class="ws-list-item" data-category="wedding cakes" data-level="advanced" data-reveal="fade-up" data-reveal-delay="300">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <span class="badge badge-gold">Wedding Cakes</span>
+                <span class="badge badge-gold">Advanced Masterclass</span>
+                <span class="text-xs font-semibold text-muted uppercase tracking-wider">5 Days • 30 Hours</span>
+              </div>
+              <h3 class="font-serif text-3xl text-plum-dark font-medium mb-3">Grand 5-Tier Wedding Cake Architecture</h3>
+              <p class="body-sm text-muted mb-6">
+                Master heavy tier internal engineering, hidden wooden dowel grids, central locking rods, transport box design, and venue assembly protocols.
+              </p>
+              <div class="flex items-center gap-6">
+                <a href="schedule.html?course=wedding-5" class="btn btn-primary btn-sm">View Schedule & Enroll</a>
+                <span class="text-xs text-rose font-semibold uppercase tracking-wider">Diploma Certificate Included</span>
+              </div>
+            </div>
+
+            <div class="ws-img-frame">
+              <img src="assets/images/ws-featured.jpg" alt="Grand 5-tier wedding cake architecture with gold pillars">
+            </div>
+          </article>
+
+          <!-- Row 5: Floral Piping Vintage -->
+          <article class="ws-list-item" data-category="floral piping" data-level="beginner" data-reveal="fade-up">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <span class="badge badge-rose">Floral Piping</span>
+                <span class="badge badge-gold">Beginner Level</span>
+                <span class="text-xs font-semibold text-muted uppercase tracking-wider">2 Days • 12 Hours</span>
+              </div>
+              <h3 class="font-serif text-3xl text-plum-dark font-medium mb-3">Lambeth Royal Icing Vintage Piping</h3>
+              <p class="body-sm text-muted mb-6">
+                Classical Victorian over-piping techniques, lattice work, lace collars, and delicate drop-string garlands using stabilized royal icing formulations.
+              </p>
+              <div class="flex items-center gap-6">
+                <a href="schedule.html?course=piping-1" class="btn btn-primary btn-sm">View Schedule & Enroll</a>
+                <span class="text-xs text-muted font-medium">Piping Tips Kit Included</span>
+              </div>
+            </div>
+
+            <div class="ws-img-frame">
+              <img src="assets/images/gal-18-new.jpg" alt="Vintage Lambeth royal icing piping and macarons">
+            </div>
+          </article>
+
+          <!-- Row 6: Fondant Wafer -->
+          <article class="ws-list-item" data-category="fondant" data-level="advanced" data-reveal="fade-up" data-reveal-delay="100">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <span class="badge badge-gold">Fondant</span>
+                <span class="badge badge-gold">Advanced Level</span>
+                <span class="text-xs font-semibold text-muted uppercase tracking-wider">2 Days • 14 Hours</span>
+              </div>
+              <h3 class="font-serif text-3xl text-plum-dark font-medium mb-3">Ethereal Wafer Paper Sails & Sculptures</h3>
+              <p class="body-sm text-muted mb-6">
+                Conditioning, steaming, and shaping rice wafer sheets into floating organic sails, ruffles, and translucent wings mounted on modern minimalist cakes.
+              </p>
+              <div class="flex items-center gap-6">
+                <a href="schedule.html?course=wafer-2" class="btn btn-primary btn-sm">View Schedule & Enroll</a>
+                <span class="text-xs text-muted font-medium">Includes Alcohol Inks Set</span>
+              </div>
+            </div>
+
+            <div class="ws-img-frame">
+              <img src="assets/images/gal-17.jpg" alt="Ethereal translucent wafer paper sails cake sculpture">
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: FEATURED MASTERCLASS (OVERSIZED IMAGE & OVERLAPPING CARD) ================= -->
+    <section class="ws-featured-section">
+      <div class="container">
+        
+        <div class="ws-featured-wrap" data-reveal="scale-in">
+          <img src="assets/images/ws-featured-new.png" alt="Grand Master Sugarcraft Diploma 5-tier wedding cake" class="ws-featured-bg">
+          
+          <div class="ws-featured-card">
+            <span class="badge badge-gold mb-3">Annual Spotlight Diploma</span>
+            <h2 class="font-serif text-3xl sm:text-5xl text-plum-dark font-medium mb-4 leading-tight">
+              Master Sugarcraft Diploma Course
+            </h2>
+            <p class="body-sm text-muted mb-6">
+              Our flagship 2-week intensive masterclass covering all 4 core disciplines. Graduates leave with a professional digital portfolio, 3 completed tiered cakes, and a business startup kit.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-plum/15 mb-6">
+              <div>
+                <span class="text-xs text-rose font-semibold uppercase block">Duration</span>
+                <span class="font-serif text-lg text-plum-dark">2 Weeks (60 Hrs)</span>
+              </div>
+              <div>
+                <span class="text-xs text-rose font-semibold uppercase block">Cohort Limit</span>
+                <span class="font-serif text-lg text-plum-dark">Strictly 6 Artists</span>
+              </div>
+            </div>
+
+            <a href="register.html?course=master-diploma" class="btn btn-primary w-full text-center">
+              Apply for Master Diploma Cohort
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5: SKILL LEVEL PROGRESSION (VERTICAL PATH) ================= -->
+    <section class="ws-progression-section">
+      <div class="container">
+        
+        <div class="text-center max-w-2xl mx-auto" data-reveal="fade-up">
+          <span class="overline text-gold">Structured Growth</span>
+          <h2 class="heading-1 text-white mt-2">The Sugarcraft Skill Path</h2>
+          <p class="body-sm text-ivory/80 mt-2">
+            Our curriculum is designed as a continuous progression path. Advance your skills step-by-step from foundational buttercream control to master diploma execution.
+          </p>
+        </div>
+
+        <div class="ws-path-vertical">
+          
+          <!-- Step 1 -->
+          <div class="ws-path-node" data-reveal="fade-up">
+            <div class="ws-path-bullet"></div>
+            <div class="ws-path-box">
+              <div class="flex items-center justify-between mb-2">
+                <span class="badge badge-rose">Level 1</span>
+                <span class="text-xs text-gold uppercase tracking-wider font-semibold">2 Days • Foundations</span>
+              </div>
+              <h3 class="font-serif text-2xl text-cream font-medium mb-2">Beginner Foundations</h3>
+              <p class="text-sm text-ivory/80">
+                Learn sponge levelling, Swiss buttercream preparation, basic palette knife pressure, and foundational piping tip mechanics. No prior baking experience required.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="ws-path-node" data-reveal="fade-up" data-reveal-delay="100">
+            <div class="ws-path-bullet"></div>
+            <div class="ws-path-box">
+              <div class="flex items-center justify-between mb-2">
+                <span class="badge badge-gold">Level 2</span>
+                <span class="text-xs text-gold uppercase tracking-wider font-semibold">3 Days • Precision</span>
+              </div>
+              <h3 class="font-serif text-2xl text-cream font-medium mb-2">Intermediate Artistry</h3>
+              <p class="text-sm text-ivory/80">
+                Master 90-degree sharp-edge ganache scraping, seamless fondant wrapping, hand-piped wired gumpaste flowers, and watercolor gradient blending.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="ws-path-node" data-reveal="fade-up" data-reveal-delay="200">
+            <div class="ws-path-bullet"></div>
+            <div class="ws-path-box">
+              <div class="flex items-center justify-between mb-2">
+                <span class="badge badge-rose">Level 3</span>
+                <span class="text-xs text-gold uppercase tracking-wider font-semibold">4 Days • Architecture</span>
+              </div>
+              <h3 class="font-serif text-2xl text-cream font-medium mb-2">Advanced Sugarcraft</h3>
+              <p class="text-sm text-ivory/80">
+                Construct multi-tier doweling systems, steam translucent wafer paper sails, gild 24K gold foil, and execute intricate Lambeth royal icing drop-strings.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="ws-path-node" data-reveal="fade-up" data-reveal-delay="300">
+            <div class="ws-path-bullet"></div>
+            <div class="ws-path-box">
+              <div class="flex items-center justify-between mb-2">
+                <span class="badge badge-gold">Master Diploma</span>
+                <span class="text-xs text-gold uppercase tracking-wider font-semibold">2 Weeks • Professional</span>
+              </div>
+              <h3 class="font-serif text-2xl text-cream font-medium mb-2">Professional Diploma Certification</h3>
+              <p class="text-sm text-ivory/80">
+                Complete grand 5-tier wedding architecture, design client tasting boxes, establish studio pricing economics, and photograph your master portfolio.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 6: WHAT YOU'LL MASTER (EDITORIAL NON-CARD LAYOUT) ================= -->
+    <section class="ws-mastery-section">
+      <div class="container">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12" data-reveal="fade-up">
+          <span class="overline">Core Competencies</span>
+          <h2 class="heading-1 text-plum-dark mt-2">What You'll Master</h2>
+          <p class="body-sm text-muted mt-2">Explore the technical mastery pillars you will absorb during your intensive academy sessions.</p>
+        </div>
+
+        <div class="ws-mastery-showcase" data-reveal="fade-up">
+          
+          <!-- Sticky Left Focus Panel -->
+          <div class="ws-mastery-panel" id="mastery-focus-panel">
+            <div class="ws-mastery-panel-badge" id="mastery-badge">Pillar 01 • Fondant Precision</div>
+            <h3 class="font-serif text-3xl text-plum-dark font-medium mb-4" id="mastery-title">Ganache Geometry & 90° Edge Control</h3>
+            <p class="body-sm text-muted leading-relaxed mb-6" id="mastery-desc">
+              Acrylic scraper leveling techniques that yield flawless 90-degree corners under fondant. Learn precise temperature conditioning for Agostoni dark chocolate couverture to create rock-solid structural undercoats.
+            </p>
+            <div class="ws-mastery-bullets" id="mastery-bullets">
+              <div class="ws-mastery-bullet">
+                <span class="text-rose font-bold">✓</span>
+                <span>Acrylic plate top and bottom leveling protocol</span>
+              </div>
+              <div class="ws-mastery-bullet">
+                <span class="text-rose font-bold">✓</span>
+                <span>2:1 dark chocolate to cream ratio stability for warm transport</span>
+              </div>
+              <div class="ws-mastery-bullet">
+                <span class="text-rose font-bold">✓</span>
+                <span>Elimination of corner bulges and fondant pinholes</span>
+              </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-border flex items-center justify-between">
+              <div>
+                <span class="text-xs text-muted block uppercase tracking-wider">Level Outcome</span>
+                <span class="font-serif text-lg font-semibold text-rose-deep" id="mastery-outcome">Sharpened Razor Edge Finish</span>
+              </div>
+              <a href="schedule.html" class="btn btn-primary btn-sm">Explore Classes</a>
+            </div>
+          </div>
+
+          <!-- Interactive Mastery List (Right) -->
+          <div class="ws-mastery-list">
+            
+            <div class="ws-mastery-row active" data-index="1" data-badge="Pillar 01 • Fondant Precision" data-title="Ganache Geometry & 90° Edge Control" data-desc="Acrylic scraper leveling techniques that yield flawless 90-degree corners under fondant. Learn precise temperature conditioning for Agostoni dark chocolate couverture to create rock-solid structural undercoats." data-outcome="Sharpened Razor Edge Finish" data-b1="Acrylic plate top and bottom leveling protocol" data-b2="2:1 dark chocolate to cream ratio stability for warm transport" data-b3="Elimination of corner bulges and fondant pinholes">
+              <span class="ws-mastery-num">01</span>
+              <div class="ws-mastery-row-content">
+                <h4 class="font-serif text-xl font-medium text-plum-dark">Ganache Geometry</h4>
+                <p class="text-xs text-muted">Acrylic scraper levelling for flawless 90-degree corners.</p>
+              </div>
+              <span class="ws-mastery-arrow">→</span>
+            </div>
+
+            <div class="ws-mastery-row" data-index="2" data-badge="Pillar 02 • Tier Engineering" data-title="Internal Doweling & Multi-Tier Transport" data-desc="Weight distribution mechanics and central locking rods engineered for safe multi-tier wedding cake transport. Eliminate sagging, tilting, and structural shear during transit." data-outcome="Structural Load Certification" data-b1="Internal wooden dowel load distribution matrices" data-b2="Stainless steel central locking rod insertion" data-b3="Custom wooden transport box stability padding">
+              <span class="ws-mastery-num">02</span>
+              <div class="ws-mastery-row-content">
+                <h4 class="font-serif text-xl font-medium text-plum-dark">Internal Doweling</h4>
+                <p class="text-xs text-muted">Weight distribution mechanics for multi-tier transport.</p>
+              </div>
+              <span class="ws-mastery-arrow">→</span>
+            </div>
+
+            <div class="ws-mastery-row" data-index="3" data-badge="Pillar 03 • Buttercream Art" data-title="Palette Knife Impasto Theory" data-desc="Color mixing, impasto stroke pressure, and organic petal sculpting using Italian meringue buttercream. Adapt oil-painting canvas art techniques directly to delicate cake tiers." data-outcome="Impasto Canvas Proficiency" data-b1="Swiss & Italian meringue buttercream temperature stabilization" data-b2="Japanese offset flexible knife pressure techniques" data-b3="Organic petal layering without color bleeding">
+              <span class="ws-mastery-num">03</span>
+              <div class="ws-mastery-row-content">
+                <h4 class="font-serif text-xl font-medium text-plum-dark">Palette Knife Theory</h4>
+                <p class="text-xs text-muted">Color mixing & impasto stroke pressure in meringue.</p>
+              </div>
+              <span class="ws-mastery-arrow">→</span>
+            </div>
+
+            <div class="ws-mastery-row" data-index="4" data-badge="Pillar 04 • Modern Mediums" data-title="Wafer Paper Sails & Sculptures" data-desc="Steaming, alcohol ink conditioning, and translucent ruffle shaping for modern minimalist cake art. Transform rice paper sheets into floating ethereal sails and textured waves." data-outcome="Sculptural Wafer Artistry" data-b1="Glycerin and alcohol moisture conditioning methods" data-b2="Alcohol ink gradient tinting & edge gilding" data-b3="Steam-shaping organic waves without brittleness">
+              <span class="ws-mastery-num">04</span>
+              <div class="ws-mastery-row-content">
+                <h4 class="font-serif text-xl font-medium text-plum-dark">Wafer Paper Sails</h4>
+                <p class="text-xs text-muted">Steaming, ink conditioning & translucent ruffle shaping.</p>
+              </div>
+              <span class="ws-mastery-arrow">→</span>
+            </div>
+
+            <div class="ws-mastery-row" data-index="5" data-badge="Pillar 05 • Botanical Craft" data-title="Wired Sugar Flowers & Petal Dusting" data-desc="Botanical accuracy in English roses, peonies, dahlias, and realistic dust shading. Learn wire gauge assembly, veining mold impressions, and dry-brush botanical highlighting." data-outcome="Botanical Sugar Realism" data-b1="Paper-thin gumpaste rolling and silicone veining" data-b2="Wire stem bundling & floristry tape wrapping" data-b3="Multi-layered petal dust color depth application">
+              <span class="ws-mastery-num">05</span>
+              <div class="ws-mastery-row-content">
+                <h4 class="font-serif text-xl font-medium text-plum-dark">Wired Sugar Flowers</h4>
+                <p class="text-xs text-muted">Botanical accuracy in roses, peonies & dust shading.</p>
+              </div>
+              <span class="ws-mastery-arrow">→</span>
+            </div>
+
+            <div class="ws-mastery-row" data-index="6" data-badge="Pillar 06 • Business & Sales" data-title="Studio Pricing, Costing & Client Sales" data-desc="Ingredient costing models, client tasting box presentation, and high-end wedding quote negotiation. Build a profitable boutique cake business model with professional confidence." data-outcome="Boutique Studio Economics" data-b1="Recipe ingredient & labor margin pricing spreadsheets" data-b2="Luxury tasting box presentation & flavor pairings" data-b3="Client contract drafting & non-refundable retainer policies">
+              <span class="ws-mastery-num">06</span>
+              <div class="ws-mastery-row-content">
+                <h4 class="font-serif text-xl font-medium text-plum-dark">Studio Pricing & Sales</h4>
+                <p class="text-xs text-muted">Ingredient costing, tasting boxes & wedding quote presentations.</p>
+              </div>
+              <span class="ws-mastery-arrow">→</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 7: LARGE GOLDEN INVITATION ENROLLMENT CTA ================= -->
+    <section class="ws-enrollment-section">
+      <div class="container">
+        
+        <div class="ws-invitation-card" data-reveal="scale-in">
+          
+          <!-- Left Column -->
+          <div class="ws-invitation-left">
+            <span class="overline text-gold block mb-2">Atelier Enrollment</span>
+            <h2 class="font-serif text-3xl sm:text-5xl text-white font-normal mb-4 leading-tight">
+              Claim Your Workstation for Spring 2026
+            </h2>
+            <p class="body-sm text-ivory/80 mb-8">
+              Tuition covers all ingredients, professional Agboss turn-tables, silicone molds, petal dusts, and a diploma certificate upon completion.
+            </p>
+            <a href="register.html" class="btn btn-gold btn-lg">
+              <span>Begin Atelier Registration</span>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Right Column -->
+          <div class="ws-invitation-right">
+            <div class="ws-invitation-right-content text-center">
+              <span class="font-script text-4xl text-gold block mb-2">Spring Cohort</span>
+              <div class="font-serif text-3xl text-white font-semibold mb-2">3 Seats Remaining</div>
+              <p class="text-xs text-blush mb-6">April 14 – April 28 Session</p>
+              <div class="inline-block border border-gold/40 rounded-full px-4 py-2 bg-plum-dark/60 text-xs text-gold font-medium uppercase tracking-wider">
+                Max 8 Artists Per Session
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-bg-glow"></div>
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Story -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="assets/images/brand-icon.png" alt="Sugar Bloom Logo" class="w-10 h-10 rounded-full border border-gold object-cover">
+            <span class="footer-brand-title">Sugar Bloom</span>
+          </div>
+          <p class="footer-brand-desc">
+            A boutique atelier and academy dedicated to master-level cake decorating, sugar flower craftsmanship, and contemporary patisserie design.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Instagram"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="#" class="social-icon" aria-label="Pinterest"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2 (Editorial)</a></li>
+            <li><a href="workshops.html">Workshops</a></li>
+            <li><a href="schedule.html">Class Schedule</a></li>
+            <li><a href="gallery.html">Mastery Gallery</a></li>
+            <li><a href="about.html">About Studio</a></li>
+          </ul>
+        </div>
+
+        <!-- Workshop Categories -->
+        <div>
+          <h4 class="footer-heading">Curriculum</h4>
+          <ul class="footer-links">
+            <li><a href="workshops.html#sugar-flowers">Sugar Flowers</a></li>
+            <li><a href="workshops.html#wedding-tiers">Tiered Wedding Cakes</a></li>
+            <li><a href="workshops.html#fondant-sculpting">Fondant Sculpting</a></li>
+            <li><a href="workshops.html#wafer-paper">Wafer Paper Art</a></li>
+            <li><a href="tools.html">Studio Tools Kit</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="footer-heading">Contact Atelier</h4>
+          <ul class="footer-links text-sm space-y-3">
+            <li class="flex items-start gap-2.5 text-blush">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" class="text-gold shrink-0 mt-0.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>742 Evergreen Atelier Way,<br>Suite 400, New York, NY</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" class="text-gold shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+18005557842" class="hover:text-rose transition">+1 (800) 555-SUGAR</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" class="text-gold shrink-0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:hello@sugarbloomacademy.com" class="hover:text-rose transition">hello@sugarbloomacademy.com</a>
+            </li>
+            <li class="flex items-center gap-2.5 text-blush text-xs">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" class="text-gold shrink-0"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Mon - Sat: 9:00 AM - 6:00 PM EST</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h4 class="footer-heading">The Atelier Journal</h4>
+          <p class="text-xs text-blush mb-4 leading-relaxed">Subscribe to receive exclusive class announcements, recipes, and decorating guides.</p>
+          <form data-validate-form data-success-message="Thank you for subscribing!" class="footer-newsletter-form">
+            <input type="email" class="footer-newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm w-full">Join Newsletter</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sugar Bloom Academy. All rights reserved. Crafting sweet elegance worldwide.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-gold transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-gold transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-gold transition-colors">Class Policies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/workshops.js"></script>
+</body>
+</html>

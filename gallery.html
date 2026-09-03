@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Masterclass Gallery & Portfolio — Sugar Bloom Academy</title>
+  <link rel="icon" type="image/png" href="assets/images/brand-icon.png">
+  <meta name="description" content="Explore an editorial masonry portfolio of fondant wedding cakes, palette knife buttercream art, wired sugar florals, and student masterworks at Sugar Bloom Academy.">
+  
+  <!-- Google Fonts & Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FAF6F0',
+            ivory: '#F5EDE0',
+            blush: '#E8C4B8',
+            rose: '#C9856A',
+            'rose-deep': '#A85C42',
+            plum: '#5C3D3D',
+            'plum-dark': '#3B2424',
+            gold: '#C9A96E',
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Jost', 'sans-serif'],
+            script: ['Great Vibes', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/navbar-footer.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
+  <script src="assets/js/navbar-footer.js"></script>
+  <script src="assets/js/gallery.js?v=129"></script>
+</head>
+<body class="bg-cream text-plum-dark font-sans antialiased overflow-x-hidden">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="site-navbar transparent">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" id="nav-brand">
+        <img src="assets/images/brand-icon.png" alt="Sugar Bloom Academy Logo" class="navbar-logo-img">
+        <div>
+          <span class="navbar-brand-text text-cream">Sugar Bloom</span>
+          <span class="navbar-brand-tagline text-gold">Master Gallery</span>
+        </div>
+      </a>
+
+      <nav class="navbar-nav" id="desktop-nav">
+        <div class="nav-dropdown-wrap">
+          <button type="button" class="nav-link nav-dropdown-btn text-cream hover:text-gold">
+            <span>Home</span>
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="nav-dropdown-item">Home 1 (Art Atelier)</a>
+            <a href="home-2.html" class="nav-dropdown-item">Home 2 (Editorial Journal)</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link text-cream hover:text-gold">About</a>
+        <a href="workshops.html" class="nav-link text-cream hover:text-gold">Workshops</a>
+        <a href="schedule.html" class="nav-link text-cream hover:text-gold">Schedule</a>
+        <a href="tools.html" class="nav-link text-cream hover:text-gold">Tools & Materials</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="contact.html" class="nav-link text-cream hover:text-gold">Contact</a>
+      </nav>
+
+      <div class="nav-actions flex items-center gap-2">
+        <button type="button" class="theme-toggle-btn" aria-label="Switch Theme">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <span>Dark</span>
+        </button>
+        <button type="button" class="rtl-toggle-btn" aria-label="Switch Direction">RTL</button>
+        <a href="register.html" class="btn btn-primary btn-sm hidden sm:inline-flex" id="nav-register-btn">Enroll Now</a>
+        <button class="mobile-menu-toggle text-cream" aria-label="Toggle navigation menu" id="mobile-toggle-btn">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-overlay"></div>
+    <div class="drawer-content">
+      <div>
+        <div class="drawer-header">
+          <div class="drawer-brand-wrap">
+            <img src="assets/images/brand-icon.png" alt="Sugar Bloom Logo" class="w-8 h-8 rounded-full object-cover border border-gold shrink-0">
+            <span class="drawer-brand-text">Sugar Bloom</span>
+          </div>
+          <div class="drawer-controls-wrap">
+            <button type="button" class="theme-toggle-btn" aria-label="Switch Theme">Dark</button>
+            <button type="button" class="rtl-toggle-btn" aria-label="Switch Direction">RTL</button>
+            <button class="drawer-close" aria-label="Close menu">&times;</button>
+          </div>
+        </div>
+
+        <nav class="drawer-nav">
+          <div class="drawer-dropdown-wrap">
+            <button type="button" class="drawer-link drawer-dropdown-btn flex items-center justify-between w-full">
+              <span>Home</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="drawer-dropdown-menu">
+              <a href="index.html" class="drawer-sublink">Home 1 (Art Atelier)</a>
+              <a href="home-2.html" class="drawer-sublink">Home 2 (Editorial Journal)</a>
+            </div>
+          </div>
+          <a href="about.html" class="drawer-link">About</a>
+          <a href="workshops.html" class="drawer-link">Workshops</a>
+          <a href="schedule.html" class="drawer-link">Schedule</a>
+          <a href="tools.html" class="drawer-link">Tools & Materials</a>
+          <a href="gallery.html" class="drawer-link active">Gallery</a>
+          <a href="contact.html" class="drawer-link">Contact</a>
+          <a href="login.html" class="drawer-link">Login</a>
+          <a href="register.html" class="drawer-link">Register</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-border text-center">
+        <a href="register.html" class="btn btn-primary w-full text-center">Enroll in Workshop</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= SECTION 1: HERO ================= -->
+    <section class="gal-hero-banner">
+      <img src="assets/images/gal-hero-new.png" alt="Sugar Bloom Academy masterwork exhibition wall" class="gal-hero-bg">
+      <div class="container relative z-10">
+        <div class="max-w-2xl" data-reveal="fade-right">
+          <!-- Back Arrow Navigation Button -->
+          <div class="mb-4">
+            <a href="javascript:history.back()" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-gold/20 text-cream text-xs font-semibold backdrop-blur-md border border-gold/30 transition-all duration-300 group shadow-md" aria-label="Go back to previous page">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="transform group-hover:-translate-x-1 transition-transform duration-300 text-gold"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>Back to Previous</span>
+            </a>
+          </div>
+
+          <div class="flex items-center gap-2 text-xs uppercase tracking-widest text-gold mb-3 font-semibold">
+            <a href="index.html" class="hover:text-cream">Sugar Bloom</a>
+            <span>/</span>
+            <span>Atelier</span>
+            <span>/</span>
+            <span class="text-cream">Portfolio Gallery</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-6xl text-white font-normal mb-4 leading-tight">
+            The Masterclass Portfolio & Gallery
+          </h1>
+
+          <p class="body-lg text-ivory/90">
+            An editorial exhibition showcasing grand tiered wedding architecture, impasto buttercream canvases, botanical wired flora, and graduate portfolio masterworks.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2: CATEGORY FILTER BAR ================= -->
+    <div class="gal-filter-bar">
+      <button class="gal-filter-pill active" data-filter="all">All Works</button>
+      <button class="gal-filter-pill" data-filter="fondant">Fondant</button>
+      <button class="gal-filter-pill" data-filter="buttercream">Buttercream</button>
+      <button class="gal-filter-pill" data-filter="floral">Floral</button>
+      <button class="gal-filter-pill" data-filter="wedding">Wedding</button>
+      <button class="gal-filter-pill" data-filter="student">Student Work</button>
+      <button class="gal-filter-pill" data-filter="studio">Studio</button>
+    </div>
+
+    <!-- ================= SECTION 3: EDITORIAL MASONRY GALLERY ================= -->
+    <section class="gal-masonry-section">
+      <div class="container">
+        
+        <div class="gal-masonry-grid">
+          
+          <!-- Tile 1: Tall Portrait (Fondant / Wedding) -->
+          <article class="gal-item gal-item-tall" data-category="fondant wedding" data-title="Classical Marble & Venetian Scroll Tier" data-artist="Chef Vivienne LaRue" data-desc="A 4-tier sharp edge ganache foundation wrapped in hand-marbled fondant and gilded in 24K Florentine gold leaf." data-reveal="fade-up">
+            <img src="assets/images/gal-1.jpg" alt="Marble fondant wedding cake" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Fondant • Wedding</span>
+              <h3 class="gal-caption-title">Classical Marble & Venetian Scroll</h3>
+              <span class="gal-caption-artist">Chef Vivienne LaRue</span>
+            </div>
+          </article>
+
+          <!-- Tile 2: Wide Landscape (Buttercream) -->
+          <article class="gal-item gal-item-wide" data-category="buttercream" data-title="Palette Knife Botanical Impasto" data-artist="Master Class Alumni Cohort" data-desc="Layered oil-style palette knife stroke techniques using Swiss meringue buttercream on an ivory canvas." data-reveal="fade-up" data-reveal-delay="100">
+            <img src="assets/images/gal-2.jpg" alt="Palette knife buttercream cake" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Buttercream</span>
+              <h3 class="gal-caption-title">Palette Knife Botanical Impasto</h3>
+              <span class="gal-caption-artist">Master Class Alumni Cohort</span>
+            </div>
+          </article>
+
+          <!-- Tile 3: Square (Floral) -->
+          <article class="gal-item gal-item-square" data-category="floral" data-title="Hand-Wired English Sugar Peonies" data-artist="Elena Rostova" data-desc="Paper-thin gumpaste rose and peony petals hand-wired and shaded with organic botanical dusts." data-reveal="fade-up" data-reveal-delay="200">
+            <img src="assets/images/gal-3.jpg" alt="Wired sugar peony bouquet" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Floral</span>
+              <h3 class="gal-caption-title">Hand-Wired English Sugar Peonies</h3>
+              <span class="gal-caption-artist">Elena Rostova</span>
+            </div>
+          </article>
+
+          <!-- Tile 4: Large Featured (Wedding / Fondant) -->
+          <article class="gal-item gal-item-featured" data-category="wedding fondant" data-title="The Grand 5-Tier Cathedral Monolith" data-artist="Chef Vivienne LaRue" data-desc="Our signature 5-tier architectural masterwork featuring acrylic plate ganache geometry and cascading sugar flora." data-reveal="fade-up">
+            <img src="assets/images/gal-4.jpg" alt="5-tier grand wedding cake" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Wedding • Featured Masterpiece</span>
+              <h3 class="gal-caption-title">The Grand 5-Tier Cathedral Monolith</h3>
+              <span class="gal-caption-artist">Chef Vivienne LaRue</span>
+            </div>
+          </article>
+
+          <!-- Tile 5: Square (Student Work) -->
+          <article class="gal-item gal-item-square" data-category="student" data-title="Pastel Rose Garden Graduation Tier" data-artist="Clara Bennett (Alumni)" data-desc="Graduation portfolio piece created during the 5-day Spring Masterclass diploma assessment." data-reveal="fade-up" data-reveal-delay="100">
+            <img src="assets/images/gal-5.jpg" alt="Student graduation cake" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Student Work</span>
+              <h3 class="gal-caption-title">Pastel Rose Garden Graduation Tier</h3>
+              <span class="gal-caption-artist">Clara Bennett (Alumni)</span>
+            </div>
+          </article>
+
+          <!-- Tile 6: Wide Landscape (Studio) -->
+          <article class="gal-item gal-item-wide" data-category="studio" data-title="Atelier Workstation Precision Technique" data-artist="Sugar Bloom Studio" data-desc="Behind-the-scenes view of students mastering razor-sharp ganache corners on Agboss turntables." data-reveal="fade-up" data-reveal-delay="200">
+            <img src="assets/images/gal-6.jpg" alt="Studio workstation technique" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Studio</span>
+              <h3 class="gal-caption-title">Atelier Workstation Precision Technique</h3>
+              <span class="gal-caption-artist">Sugar Bloom Studio</span>
+            </div>
+          </article>
+
+          <!-- Tile 7: Square (Fondant / Student) -->
+          <article class="gal-item gal-item-square" data-category="fondant student" data-title="Ethereal Wafer Paper Sails & Gold Foil" data-artist="Marcus Vance (Alumni)" data-desc="Steamed translucent rice paper sails anchored to a sharp-edge dark ganache tier." data-reveal="fade-up">
+            <img src="assets/images/gal-7.jpg" alt="Wafer paper sails cake" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Fondant • Student</span>
+              <h3 class="gal-caption-title">Ethereal Wafer Paper Sails & Gold Foil</h3>
+              <span class="gal-caption-artist">Marcus Vance (Alumni)</span>
+            </div>
+          </article>
+
+          <!-- Tile 8: Tall Portrait (Buttercream) -->
+          <article class="gal-item gal-item-tall" data-category="buttercream" data-title="Meringue Palette Floral Canvas" data-artist="Chef Vivienne LaRue" data-desc="Oil painting techniques adapted to Italian meringue buttercream using Japanese offset blades." data-reveal="fade-up" data-reveal-delay="100">
+            <img src="assets/images/gal-8.jpg" alt="Meringue buttercream canvas" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Buttercream</span>
+              <h3 class="gal-caption-title">Meringue Palette Floral Canvas</h3>
+              <span class="gal-caption-artist">Chef Vivienne LaRue</span>
+            </div>
+          </article>
+
+          <!-- Tile 9: Square (Floral) -->
+          <article class="gal-item gal-item-square" data-category="floral" data-title="Cascading Sugar Orchids & Hydrangeas" data-artist="Sophie Laurent" data-desc="Botanical sugar flora arrangement wire-mounted on a minimalist white fondant cylinder." data-reveal="fade-up" data-reveal-delay="200">
+            <img src="assets/images/gal-9.jpg" alt="Sugar orchids bouquet" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Floral</span>
+              <h3 class="gal-caption-title">Cascading Sugar Orchids & Hydrangeas</h3>
+              <span class="gal-caption-artist">Sophie Laurent</span>
+            </div>
+          </article>
+
+          <!-- Tile 10: Wide Landscape (Student / Studio) -->
+          <article class="gal-item gal-item-wide" data-category="student studio" data-title="Spring Cohort Masterclass Collaboration" data-artist="2026 Student Team" data-desc="Students working together on tier assembly, internal wooden dowel grids, and transport boxes." data-reveal="fade-up">
+            <img src="assets/images/gal-10.jpg" alt="Student collaboration in atelier" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Student Work • Studio</span>
+              <h3 class="gal-caption-title">Spring Cohort Masterclass Collaboration</h3>
+              <span class="gal-caption-artist">2026 Student Team</span>
+            </div>
+          </article>
+
+          <!-- Tile 11: Square (Wedding) -->
+          <article class="gal-item gal-item-square" data-category="wedding" data-title="Bas-Relief Botanical Wedding Structure" data-artist="Elena Rostova" data-desc="Classical stone bas-relief molding on fondant paired with wired blush garden roses." data-reveal="fade-up" data-reveal-delay="100">
+            <img src="assets/images/gal-11.jpg" alt="Bas-relief wedding cake" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Wedding</span>
+              <h3 class="gal-caption-title">Bas-Relief Botanical Wedding Structure</h3>
+              <span class="gal-caption-artist">Elena Rostova</span>
+            </div>
+          </article>
+
+          <!-- Tile 12: Tall Portrait (Studio) -->
+          <article class="gal-item gal-item-tall" data-category="studio" data-title="24K Gold Shading Details" data-artist="Atelier Master Class" data-desc="Close-up macro detail of squirrel-hair watercolor brush shading 24K gold foil onto sugar petals." data-reveal="fade-up" data-reveal-delay="200">
+            <img src="assets/images/gal-12.jpg" alt="Gold leaf shading detail" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Studio Details</span>
+              <h3 class="gal-caption-title">24K Gold Shading Details</h3>
+              <span class="gal-caption-artist">Atelier Master Class</span>
+            </div>
+          </article>
+
+          <!-- Tile 13: Wide Landscape (Fondant / Wedding) -->
+          <article class="gal-item gal-item-wide" data-category="fondant wedding" data-title="Pastel Pink & Lavender Lace Architecture" data-artist="Chef Vivienne LaRue" data-desc="A 3-tier pastel wedding sculpture encrusted with handcrafted edible sugar lace and pearl piping." data-reveal="fade-up">
+            <img src="assets/images/gal-13.jpg" alt="Pastel wedding cake with sugar lace" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Fondant • Wedding</span>
+              <h3 class="gal-caption-title">Pastel Pink & Lavender Lace</h3>
+              <span class="gal-caption-artist">Chef Vivienne LaRue</span>
+            </div>
+          </article>
+
+          <!-- Tile 14: Square (Studio / Fondant) -->
+          <article class="gal-item gal-item-square" data-category="studio fondant" data-title="Macro Gold Piping Mechanics" data-artist="Elena Rostova" data-desc="Close-up execution of 24K gold royal icing drop-string piping on smooth ivory ganache." data-reveal="fade-up" data-reveal-delay="100">
+            <img src="assets/images/gal-14.jpg" alt="Piping gold royal icing detail" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Studio • Fondant</span>
+              <h3 class="gal-caption-title">Macro Gold Piping Mechanics</h3>
+              <span class="gal-caption-artist">Elena Rostova</span>
+            </div>
+          </article>
+
+          <!-- Tile 15: Square (Buttercream / Floral) -->
+          <article class="gal-item gal-item-square" data-category="buttercream floral" data-title="Vintage Lambeth Ruffled Buttercream" data-artist="Clara Bennett (Alumni)" data-desc="Intricate Lambeth style over-piping and ruffled buttercream borders paired with sugar roses." data-reveal="fade-up" data-reveal-delay="200">
+            <img src="assets/images/gal-15.jpg" alt="Vintage Lambeth piped buttercream cake" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Buttercream • Floral</span>
+              <h3 class="gal-caption-title">Vintage Lambeth Ruffled Buttercream</h3>
+              <span class="gal-caption-artist">Clara Bennett (Alumni)</span>
+            </div>
+          </article>
+
+          <!-- Tile 16: Wide Landscape (Fondant / Student) -->
+          <article class="gal-item gal-item-wide" data-category="fondant student" data-title="Minimalist Metallic & Wafer Sculpture" data-artist="Marcus Vance (Alumni)" data-desc="Modern cake sculpture featuring copper metallic leaf highlights and translucent rice paper sails." data-reveal="fade-up">
+            <img src="assets/images/gal-16.jpg" alt="Modern metallic wafer cake sculpture" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Fondant • Student</span>
+              <h3 class="gal-caption-title">Minimalist Metallic & Wafer Sculpture</h3>
+              <span class="gal-caption-artist">Marcus Vance (Alumni)</span>
+            </div>
+          </article>
+
+          <!-- Tile 17: Square (Wedding / Floral) -->
+          <article class="gal-item gal-item-square" data-category="wedding floral" data-title="Grand Parisian Ballroom Monolith" data-artist="Chef Vivienne LaRue" data-desc="A 4-tier grand wedding cake adorned with sugar roses and 24K gold leaf trim set in a Parisian ballroom." data-reveal="fade-up" data-reveal-delay="100">
+            <img src="assets/images/gal-19.jpg" alt="Grand Parisian ballroom wedding cake" class="gal-img">
+            <div class="gal-caption">
+              <span class="gal-caption-cat">Wedding • Floral</span>
+              <h3 class="gal-caption-title">Grand Parisian Ballroom Monolith</h3>
+              <span class="gal-caption-artist">Chef Vivienne LaRue</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: CURATED EXHIBITION PAVILION (MODERN EDITORIAL) ================= -->
+    <section class="gal-showcase-pavilion-section relative py-24 bg-plum-dark text-cream overflow-hidden border-y border-gold/20">
+      <div class="container relative z-10">
+        
+        <!-- Header -->
+        <div class="max-w-3xl mb-16" data-reveal="fade-up">
+          <span class="overline text-gold">Curated Exhibition Pavilion</span>
+          <h2 class="font-serif text-4xl sm:text-6xl text-cream font-normal mt-2 leading-tight">
+            The Grand Sugarcraft Salon & Masterwork Gallery
+          </h2>
+          <p class="body-lg text-ivory/80 mt-4 max-w-2xl">
+            A curated showcase celebrating award-winning student diploma capstones, international salon gold-medalists, and behind-the-scenes patisserie engineering.
+          </p>
+        </div>
+
+        <!-- Asymmetrical Editorial Pavilion Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+          
+          <!-- Left Main Exhibition Spotlight (7 Columns) -->
+          <div class="lg:col-span-7 flex flex-col justify-between bg-white/5 border border-gold/30 rounded-3xl p-8 sm:p-10 backdrop-blur-xl relative overflow-hidden group shadow-2xl" data-reveal="fade-right">
+            
+            <div class="flex items-center justify-between mb-8 z-10 relative">
+              <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/20 text-gold text-xs font-semibold uppercase tracking-widest border border-gold/40">
+                🏆 Salon Grand Prix 2025 Winner
+              </span>
+              <span class="text-xs text-gold/80 uppercase tracking-widest font-semibold">Catalogue No. SAL-089</span>
+            </div>
+
+            <div class="relative rounded-2xl overflow-hidden mb-8 aspect-[16/10]">
+              <img src="assets/images/gal-11-new.png" alt="Salon Grand Prix winning 5-tier cathedral wedding masterpiece" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-plum-dark via-transparent to-transparent opacity-80"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6 z-10">
+                <span class="text-xs font-bold text-gold uppercase tracking-wider block mb-1">Featured Masterpiece</span>
+                <h3 class="font-serif text-2xl sm:text-3xl text-cream font-semibold">The Grand 5-Tier Cathedral Monolith</h3>
+              </div>
+            </div>
+
+            <!-- 4-Stat Metrics Bar -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-gold/20">
+              <div>
+                <span class="font-serif text-2xl text-gold font-light block">14</span>
+                <span class="text-[11px] text-ivory/70 uppercase tracking-wider font-medium block mt-0.5">Salon Gold Medals</span>
+              </div>
+              <div>
+                <span class="font-serif text-2xl text-gold font-light block">84%</span>
+                <span class="text-[11px] text-ivory/70 uppercase tracking-wider font-medium block mt-0.5">Normandy Butterfat</span>
+              </div>
+              <div>
+                <span class="font-serif text-2xl text-gold font-light block">0.1mm</span>
+                <span class="text-[11px] text-ivory/70 uppercase tracking-wider font-medium block mt-0.5">Wafer Precision</span>
+              </div>
+              <div>
+                <span class="font-serif text-2xl text-gold font-light block">100%</span>
+                <span class="text-[11px] text-ivory/70 uppercase tracking-wider font-medium block mt-0.5">Diploma Distinction</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: 4 Signature Creation Highlight Cards (5 Columns - Height Balanced) -->
+          <div class="lg:col-span-5 flex flex-col justify-between gap-4" data-reveal="fade-left" data-reveal-delay="150">
+            
+            <!-- Card 1 -->
+            <div class="bg-white/5 border border-gold/20 rounded-2xl p-4 sm:p-5 hover:border-gold/60 transition-all duration-300 backdrop-blur-md flex gap-4 items-center">
+              <img src="assets/images/gal-wafer-paper-unique.jpg" alt="Wafer paper sails cake" class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover shrink-0 border border-gold/30">
+              <div>
+                <span class="text-[10px] text-gold uppercase tracking-widest font-bold block mb-0.5">01 / Student Capstone</span>
+                <h4 class="font-serif text-base sm:text-lg text-cream font-semibold mb-0.5">Ethereal Wafer Paper Sails</h4>
+                <p class="text-xs text-ivory/70 leading-relaxed mb-1">Translucent steamed rice paper sails anchored to sharp-edge ganache.</p>
+                <span class="text-[10px] text-rose font-medium block">Artist: Marcus Vance (Alumni)</span>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white/5 border border-gold/20 rounded-2xl p-4 sm:p-5 hover:border-gold/60 transition-all duration-300 backdrop-blur-md flex gap-4 items-center">
+              <img src="assets/images/cnt-cta-new.png" alt="Translucent isomalt sugar crystal sphere" class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover shrink-0 border border-gold/30">
+              <div>
+                <span class="text-[10px] text-gold uppercase tracking-widest font-bold block mb-0.5">02 / Sugar Blown Art</span>
+                <h4 class="font-serif text-base sm:text-lg text-cream font-semibold mb-0.5">Isomalt Crystal Orb</h4>
+                <p class="text-xs text-ivory/70 leading-relaxed mb-1">Hand-blown clear sugar sphere with internal gold foil inclusions.</p>
+                <span class="text-[10px] text-rose font-medium block">Artist: Sophia Lin</span>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white/5 border border-gold/20 rounded-2xl p-4 sm:p-5 hover:border-gold/60 transition-all duration-300 backdrop-blur-md flex gap-4 items-center">
+              <img src="assets/images/sch-cta.jpg" alt="Botanical gumpaste English rose close up" class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover shrink-0 border border-gold/30">
+              <div>
+                <span class="text-[10px] text-gold uppercase tracking-widest font-bold block mb-0.5">03 / Sugar Flora</span>
+                <h4 class="font-serif text-base sm:text-lg text-cream font-semibold mb-0.5">English Garden Rose Cascade</h4>
+                <p class="text-xs text-ivory/70 leading-relaxed mb-1">32 individual wired gumpaste petals with natural dusting powders.</p>
+                <span class="text-[10px] text-rose font-medium block">Master Instructor: Chef Vivienne LaRue</span>
+              </div>
+            </div>
+
+            <!-- Card 4 (Added for Column Height Balance) -->
+            <div class="bg-white/5 border border-gold/20 rounded-2xl p-4 sm:p-5 hover:border-gold/60 transition-all duration-300 backdrop-blur-md flex gap-4 items-center">
+              <img src="assets/images/cand6.jpg" alt="Sharp edge chocolate ganache architecture" class="w-20 h-20 sm:w-24 sm:h-24 rounded-xl object-cover shrink-0 border border-gold/30">
+              <div>
+                <span class="text-[10px] text-gold uppercase tracking-widest font-bold block mb-0.5">04 / Ganache Architecture</span>
+                <h4 class="font-serif text-base sm:text-lg text-cream font-semibold mb-0.5">90° Sharp Ganache Monolith</h4>
+                <p class="text-xs text-ivory/70 leading-relaxed mb-1">Mathematical right-angle corner precision using heated acrylic disc scrapers.</p>
+                <span class="text-[10px] text-rose font-medium block">Artist: Julian DuPont (Diploma Fellow)</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= NEW SECTION A: EXHIBITION SPOTLIGHT & TECHNIQUE INSPECTOR ================= -->
+    <section class="gal-inspector-section">
+      <div class="container">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12" data-reveal="fade-up">
+          <span class="overline text-gold">Masterpiece Anatomy</span>
+          <h2 class="font-serif text-3xl sm:text-5xl text-cream font-normal mt-2">Exhibition Spotlight & Technique Inspector</h2>
+          <p class="body-sm text-ivory/70 mt-2">Click any hot-pin on the master tier below to examine the micro-level craftsmanship behind our flagship exhibition piece.</p>
+        </div>
+
+        <div class="gal-inspector-grid" data-reveal="fade-up">
+          
+          <!-- Image Container with Hot-Pins -->
+          <div class="gal-inspector-image-wrap">
+            <img src="assets/images/gal-cta-new.png" alt="5-tier grand wedding cake exhibition masterpiece" class="gal-inspector-img" id="inspector-main-img">
+            
+            <!-- Pin 1: Flowers -->
+            <button type="button" class="gal-inspector-pin active" style="top: 22%; left: 65%;" data-title="Botanical Sugar Flora Cascade" data-tag="Hand-Wired Gumpaste" data-specs="48 Hours Sculpting • 140 Petals • 28-Gauge Wire" data-desc="Each English garden rose and peony is individually rolled paper-thin, textured with European silicone veining molds, and air-brushed with organic botanical dusts." data-chef="Elena Rostova">
+              <span class="gal-inspector-pin-pulse"></span>
+              <span class="gal-inspector-pin-num">1</span>
+            </button>
+
+            <!-- Pin 2: Gold Leaf -->
+            <button type="button" class="gal-inspector-pin" style="top: 48%; left: 35%;" data-title="24K Florentine Gold Leaf Gilding" data-tag="Edible Leaf Foil" data-specs="24K Gold • Soft Squirrel Brush • Alcohol Transfer" data-desc="Applied using dry watercolor gilding techniques. Pure 24K edible leaf foil is burnished into raw fondant to create antique Venetian luster." data-chef="Chef Vivienne LaRue">
+              <span class="gal-inspector-pin-pulse"></span>
+              <span class="gal-inspector-pin-num">2</span>
+            </button>
+
+            <!-- Pin 3: Ganache Base -->
+            <button type="button" class="gal-inspector-pin" style="top: 78%; left: 55%;" data-title="Sharpened 90° Ganache Edge Geometry" data-tag="Agostoni Dark Couverture" data-specs="0.1mm Margin • Dual Acrylic Plates • 2:1 Dark Ganache" data-desc="Foundation tier leveled with dual clear acrylic discs to ensure absolute 90-degree right angles under fondant without bulge or sagging." data-chef="Marcus Vance">
+              <span class="gal-inspector-pin-pulse"></span>
+              <span class="gal-inspector-pin-num">3</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Detail Inspector Card (Height Balanced & Rich Media) -->
+          <div class="gal-inspector-panel flex flex-col justify-between p-8 bg-plum-dark/90 border border-gold/40 rounded-3xl backdrop-blur-xl shadow-2xl">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="badge badge-gold" id="insp-tag">Hand-Wired Gumpaste</span>
+                <span class="text-[10px] text-ivory/60 uppercase tracking-widest font-semibold">Micro-Analysis</span>
+              </div>
+              <h3 class="font-serif text-2xl sm:text-3xl text-cream font-medium mb-2" id="insp-title">Botanical Sugar Flora Cascade</h3>
+              <p class="text-xs text-gold uppercase tracking-widest font-semibold mb-4" id="insp-specs">48 Hours Sculpting • 140 Petals • 28-Gauge Wire</p>
+              <p class="body-sm text-ivory/80 leading-relaxed mb-6" id="insp-desc">
+                Each English garden rose and peony is individually rolled paper-thin, textured with European silicone veining molds, and air-brushed with organic botanical dusts.
+              </p>
+
+              <!-- 3 Craftsmanship & Material Micro-Grid Cards -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+                <div class="p-3.5 rounded-xl bg-white/5 border border-gold/20">
+                  <span class="text-[10px] text-gold uppercase font-bold tracking-wider block mb-1">01 / Medium Ratio</span>
+                  <p class="text-[11px] text-ivory/80 leading-tight">Dutch Gum Tragacanth (4.2g/100g) • 0.3mm Petal Flexibility</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-white/5 border border-gold/20">
+                  <span class="text-[10px] text-gold uppercase font-bold tracking-wider block mb-1">02 / Provenance</span>
+                  <p class="text-[11px] text-ivory/80 leading-tight">Modeled after 18th-century Royal Versailles Botanical Prints</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-white/5 border border-gold/20">
+                  <span class="text-[10px] text-gold uppercase font-bold tracking-wider block mb-1">03 / Diploma Level</span>
+                  <p class="text-[11px] text-ivory/80 leading-tight">Featured in 5-Day Masterclass International Jury Registry</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-5 border-t border-cream/15 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-ivory/60 block uppercase tracking-wider">Lead Craftsman</span>
+                <span class="font-serif text-lg font-semibold text-gold" id="insp-chef">Elena Rostova</span>
+              </div>
+              <a href="workshops.html" class="btn btn-gold btn-sm">
+                <span>Master This Technique</span>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5: CURATED ARCHIVES (MODERN STAGGERED EDITORIAL SHOWCASE) ================= -->
+    <section class="gal-archives-section relative py-20 bg-cream">
+      <div class="container">
+        
+        <!-- Header -->
+        <div class="text-center max-w-2xl mx-auto mb-10" data-reveal="fade-up">
+          <span class="overline">Curatorial Vault</span>
+          <h2 class="heading-1 text-plum-dark mt-2">Curated Atelier Archives</h2>
+          <p class="body-sm text-muted mt-2">Explore thematic permanent collections showcasing our most celebrated historical diplomas and studio exhibits.</p>
+        </div>
+
+        <!-- Horizontal Filter Strip with 4 Balanced Collection Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-10" data-reveal="fade-up">
+          <button type="button" class="gal-archive-tab active px-5 py-3 rounded-2xl border border-gold/40 text-left transition-all duration-300 shadow-sm" 
+            data-archive="1" 
+            data-title="Collection I: The Versailles Floral Archives" 
+            data-year="2024–2026 Collection" 
+            data-desc="A retrospective on wired sugar botanicals, focusing on paper-thin petal translucency, custom silicone veining, and natural botanical dust shading." 
+            data-heroimg="gal-versailles-hero-unique.jpg" 
+            data-img1="gal-peony-bouquet-unique.jpg" 
+            data-img2="gal-sugar-orchids-unique.jpg" 
+            data-cap1="Wired English Peony Bouquet" 
+            data-cap2="Cascading Sugar Orchids">
+            <span class="text-[10px] text-rose font-bold block uppercase tracking-wider">Collection 01</span>
+            <span class="font-serif text-base text-plum-dark font-semibold block">Versailles Floral</span>
+          </button>
+
+          <button type="button" class="gal-archive-tab px-5 py-3 rounded-2xl border border-gold/40 text-left transition-all duration-300 shadow-sm" 
+            data-archive="2" 
+            data-title="Collection II: Minimalist Architectural Tiers" 
+            data-year="2025 Permanent Collection" 
+            data-desc="Geometric cake design exploring clean ganache lines, wafer paper sails, and bas-relief stone textures." 
+            data-heroimg="gal-arch-hero-unique.jpg" 
+            data-img1="gal-arch-marble-unique.jpg" 
+            data-img2="gal-arch-wafer-unique.jpg" 
+            data-cap1="Venetian Marble & Gold Scroll" 
+            data-cap2="Wafer Paper Translucent Sails">
+            <span class="text-[10px] text-rose font-bold block uppercase tracking-wider">Collection 02</span>
+            <span class="font-serif text-base text-plum-dark font-semibold block">Architectural Tiers</span>
+          </button>
+
+          <button type="button" class="gal-archive-tab px-5 py-3 rounded-2xl border border-gold/40 text-left transition-all duration-300 shadow-sm" 
+            data-archive="3" 
+            data-title="Collection III: Impasto Meringue Canvases" 
+            data-year="2026 Atelier Collection" 
+            data-desc="Fine art oil painting techniques transferred to Italian meringue buttercream using Japanese palette knives." 
+            data-heroimg="gal-impasto-hero-unique.jpg" 
+            data-img1="gal-impasto-botanical-unique.jpg" 
+            data-img2="gal-impasto-canvas-unique.jpg" 
+            data-cap1="Botanical Palette Impasto" 
+            data-cap2="Meringue Floral Oil Canvas">
+            <span class="text-[10px] text-rose font-bold block uppercase tracking-wider">Collection 03</span>
+            <span class="font-serif text-base text-plum-dark font-semibold block">Impasto Canvases</span>
+          </button>
+
+          <button type="button" class="gal-archive-tab px-5 py-3 rounded-2xl border border-gold/40 text-left transition-all duration-300 shadow-sm" 
+            data-archive="4" 
+            data-title="Collection IV: Royal Lambeth & Bas-Relief" 
+            data-year="2026 Master Archive" 
+            data-desc="Intricate Victorian stringwork overpiping combined with hand-molded Italian bas-relief plaster technique." 
+            data-heroimg="gal-lambeth-hero-unique.jpg" 
+            data-img1="gal-lambeth-overpipe-unique.jpg" 
+            data-img2="gal-lambeth-basrelief-unique.jpg" 
+            data-cap1="Victorian Lambeth Overpiped Tier" 
+            data-cap2="Baroque Bas-Relief Mold Gold Accent">
+            <span class="text-[10px] text-rose font-bold block uppercase tracking-wider">Collection 04</span>
+            <span class="font-serif text-base text-plum-dark font-semibold block">Royal Lambeth</span>
+          </button>
+        </div>
+
+        <!-- Asymmetric 3-Image Staggered Mosaic Showcase Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch" id="archive-display-card" data-reveal="fade-up">
+          
+          <!-- Hero Feature Item (7 Columns) -->
+          <div class="lg:col-span-7 relative rounded-3xl overflow-hidden shadow-xl border border-gold/30 group min-h-[460px] flex flex-col justify-end p-8 bg-plum-dark">
+            <img src="assets/images/gal-versailles-hero-unique.jpg" alt="Collection masterwork feature image" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" id="archive-heroimg">
+            <div class="absolute inset-0 bg-gradient-to-t from-plum-dark via-plum-dark/40 to-transparent"></div>
+            
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-3.5 py-1 rounded-full bg-gold/90 text-plum-dark text-xs font-bold uppercase tracking-wider shadow-md" id="archive-year">
+                  2024–2026 Collection
+                </span>
+                <span class="px-3 py-1 rounded-full bg-plum-dark/80 backdrop-blur-md text-gold text-xs font-semibold border border-gold/40">
+                  Permanent Archive
+                </span>
+              </div>
+              <h3 class="font-serif text-3xl sm:text-4xl text-cream font-medium mb-3" id="archive-title">
+                Collection I: The Versailles Floral Archives
+              </h3>
+              <p class="body-sm text-ivory/80 max-w-xl leading-relaxed" id="archive-desc">
+                A retrospective on wired sugar botanicals, focusing on paper-thin petal translucency, custom silicone veining, and natural botanical dust shading.
+              </p>
+            </div>
+          </div>
+
+          <!-- Staggered Side Macro Technique Items (5 Columns) -->
+          <div class="lg:col-span-5 flex flex-col gap-6">
+            
+            <!-- Side Image 1 -->
+            <div class="relative rounded-2xl overflow-hidden shadow-md border border-gold/30 h-[220px] group bg-plum-dark">
+              <img src="assets/images/gal-peony-bouquet-unique.jpg" alt="Archive detail preview image 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" id="archive-img1">
+              <div class="absolute inset-0 bg-gradient-to-t from-plum-dark/90 via-transparent to-transparent"></div>
+              <span class="gal-archive-thumb-cap" id="archive-cap1">Wired English Peony Bouquet</span>
+            </div>
+
+            <!-- Side Image 2 -->
+            <div class="relative rounded-2xl overflow-hidden shadow-md border border-gold/30 h-[220px] group bg-plum-dark">
+              <img src="assets/images/gal-sugar-orchids-unique.jpg" alt="Archive detail preview image 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" id="archive-img2">
+              <div class="absolute inset-0 bg-gradient-to-t from-plum-dark/90 via-transparent to-transparent"></div>
+              <span class="gal-archive-thumb-cap" id="archive-cap2">Cascading Sugar Orchids</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= NEW SECTION 5: BOTANICAL MEDIUM & COLOR MATRIX ================= -->
+    <section class="gal-medium-section bg-plum-dark text-cream border-y border-gold/20 relative overflow-hidden py-20 sm:py-24">
+      <div class="container relative z-10">
+        
+        <div class="text-center max-w-xl mx-auto mb-12" data-reveal="fade-up">
+          <span class="overline text-gold">Atelier Pigment Science</span>
+          <h2 class="heading-1 text-cream mt-2">Medium & Color Formulation Matrix</h2>
+          <p class="body-sm text-ivory/80 mt-2">Explore the exact edible medium ratios, drying thresholds, and pigment blends engineered for museum-grade durability.</p>
+        </div>
+
+        <div class="gal-medium-grid">
+          
+          <div class="gal-palette-bar" data-reveal="fade-right">
+            <div class="gal-palette-chip active" data-medium="1" data-title="Blush Rose Botanical Gumpaste" data-desc="Hand-kneaded with Dutch gum tragacanth and cold-pressed egg albumen. This medium allows ultra-thin 0.3mm petal rolling while resisting high humidity environments up to 78% relative humidity." data-flex="0.3 mm" data-humidity="78% RH" data-origin="UK Dust">
+              <div class="gal-chip-color" style="background: #E8C4B8;"></div>
+              <div>
+                <span class="text-xs font-bold text-gold uppercase tracking-wider block">Medium Option 01</span>
+                <h3 class="font-serif text-lg font-semibold text-cream">Blush Rose Gumpaste</h3>
+                <span class="text-xs text-ivory/70">Tylose Ratio: 1.5% • Drying Time: 4 Hours</span>
+              </div>
+            </div>
+
+            <div class="gal-palette-chip" data-medium="2" data-title="24K Gold Spirit Glaze Formulation" data-desc="Formulated with 96% grain spirit solvent and 24-Karat Florentine edible gold leaf particles. Applied with fine squirrel-hair brushes for high-luster metallic accents." data-flex="Liquid Glaze" data-humidity="85% RH" data-origin="Florentine Leaf">
+              <div class="gal-chip-color" style="background: #C9A96E;"></div>
+              <div>
+                <span class="text-xs font-bold text-gold uppercase tracking-wider block">Medium Option 02</span>
+                <h3 class="font-serif text-lg font-semibold text-cream">24K Gold Spirit Glaze</h3>
+                <span class="text-xs text-ivory/70">Solvent: 96% Isopropyl • Foil: 24-Karat Edible Leaf</span>
+              </div>
+            </div>
+
+            <div class="gal-palette-chip" data-medium="3" data-title="Plum Velvet Spray Ganache" data-desc="Tempered Agostoni 70% dark chocolate combined with 34% cocoa butter, sprayed at 42°C to create a matte suede velvet texture on chilled ganache cakes." data-flex="Velvet Spray" data-humidity="65% RH" data-origin="Italian Cocoa">
+              <div class="gal-chip-color" style="background: #5C3D3D;"></div>
+              <div>
+                <span class="text-xs font-bold text-gold uppercase tracking-wider block">Medium Option 03</span>
+                <h3 class="font-serif text-lg font-semibold text-cream">Plum Velvet Ganache</h3>
+                <span class="text-xs text-ivory/70">Cocoa Butter: 34% • Velvet Spray Temp: 42°C</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gal-medium-card bg-white/5 border border-gold/30 rounded-3xl p-8 backdrop-blur-xl shadow-2xl" id="medium-card-display" data-reveal="fade-left">
+            <div>
+              <span class="badge badge-gold mb-3">Featured Formulation</span>
+              <h3 class="font-serif text-3xl font-semibold text-cream mb-3" id="medium-title">Blush Rose Botanical Gumpaste</h3>
+              <p class="body-xs text-ivory/80 leading-relaxed mb-6" id="medium-desc">
+                Hand-kneaded with Dutch gum tragacanth and cold-pressed egg albumen. This medium allows ultra-thin 0.3mm petal rolling while resisting high humidity environments up to 78% relative humidity.
+              </p>
+            </div>
+
+            <div class="gal-medium-stats border-t border-gold/20 pt-6">
+              <div>
+                <span class="text-xs font-semibold text-gold uppercase tracking-wider block">Flexibility</span>
+                <span class="font-serif text-2xl font-bold text-cream" id="medium-flex">0.3 mm</span>
+              </div>
+              <div>
+                <span class="text-xs font-semibold text-gold uppercase tracking-wider block">Humidity Rating</span>
+                <span class="font-serif text-2xl font-bold text-cream" id="medium-humidity">78% RH</span>
+              </div>
+              <div>
+                <span class="text-xs font-semibold text-gold uppercase tracking-wider block">Pigment Origin</span>
+                <span class="font-serif text-2xl font-bold text-cream" id="medium-origin">UK Dust</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= NEW SECTION 6: MACRO CRAFTSMANSHIP SPOTLIGHT ================= -->
+    <section class="gal-macro-section">
+      <div class="container">
+        
+        <div class="text-center max-w-2xl mx-auto" data-reveal="fade-up">
+          <span class="overline text-gold">High-Resolution Precision</span>
+          <h2 class="heading-1 text-cream mt-2">Macro Craftsmanship & Technique Spotlight</h2>
+          <p class="body-sm text-ivory/80 mt-2">Up-close examination of macro structural details achieved by atelier masterclass graduates.</p>
+        </div>
+
+        <div class="gal-macro-strip">
+          
+          <div class="gal-macro-card" data-reveal="fade-up">
+            <div class="gal-macro-img-wrap">
+              <img src="assets/images/gal-macro-veining-new.png" alt="Macro view of paper-thin gumpaste peony petals showing translucent veining" class="gal-macro-img">
+            </div>
+            <div>
+              <span class="text-xs font-bold text-gold uppercase tracking-widest block mb-1">Macro Precision 01</span>
+              <h3 class="font-serif text-2xl font-semibold text-cream">Translucent Petal Veining</h3>
+              <p class="text-xs text-ivory/70 mt-2 leading-relaxed">
+                Silicone double-sided veining impressions matched with graduated petal dust shading for zero-reflection natural light diffusion.
+              </p>
+            </div>
+          </div>
+
+          <div class="gal-macro-card" data-reveal="fade-up" data-reveal-delay="100">
+            <div class="gal-macro-img-wrap">
+              <img src="assets/images/gal-macro-piping-new.png" alt="Macro view of Lambeth royal icing overpiping and drop-string garlands" class="gal-macro-img">
+            </div>
+            <div>
+              <span class="text-xs font-bold text-gold uppercase tracking-widest block mb-1">Macro Precision 02</span>
+              <h3 class="font-serif text-2xl font-semibold text-cream">Royal Icing Drop-String Tension</h3>
+              <p class="text-xs text-ivory/70 mt-2 leading-relaxed">
+                Victorian over-piping using #00 piping tips. Each line is suspended across 45-degree catenary curves without structural sag.
+              </p>
+            </div>
+          </div>
+
+          <div class="gal-macro-card" data-reveal="fade-up" data-reveal-delay="200">
+            <div class="gal-macro-img-wrap">
+              <img src="assets/images/gal-macro-goldleaf-new.png" alt="Macro view of 24K gold foil crackle gilding on fondant" class="gal-macro-img">
+            </div>
+            <div>
+              <span class="text-xs font-bold text-gold uppercase tracking-widest block mb-1">Macro Precision 03</span>
+              <h3 class="font-serif text-2xl font-semibold text-cream">24K Leaf Crackle Adhesion</h3>
+              <p class="text-xs text-ivory/70 mt-2 leading-relaxed">
+                Genuine 24K gold foil applied over damp fondant using natural squirrel gilding mops for an organic distressed antique finish.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>    </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 7: LIGHTBOX MODAL ================= -->
+    <div class="gal-lightbox" id="gallery-lightbox">
+      <div class="gal-lightbox-container">
+        <button class="gal-lightbox-close" id="lightbox-close" aria-label="Close modal">&times;</button>
+        <img id="lightbox-img" src="" alt="" class="gal-lightbox-img">
+        <div class="gal-lightbox-info">
+          <span id="lightbox-category" class="text-xs font-bold text-rose uppercase tracking-widest block mb-1">Category</span>
+          <h3 id="lightbox-title" class="font-serif text-3xl font-semibold text-plum-dark mb-2">Masterwork Title</h3>
+          <span id="lightbox-artist" class="text-xs font-semibold text-gold block mb-4">Artist Name</span>
+          <p id="lightbox-desc" class="text-xs text-muted leading-relaxed mb-6">Masterwork description text.</p>
+          <a href="register.html" class="btn btn-primary btn-sm inline-flex self-start">Enroll in Workshop</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= SECTION 6: CURATORIAL VAULT & ART COLLECTION CTA (GAPLESS EDITORIAL) ================= -->
+    <section class="relative py-24 bg-plum-dark text-cream overflow-hidden border-t border-gold/30">
+      <div class="absolute inset-0 opacity-30 bg-cover bg-center" style="background-image: url('assets/images/gal-cta-bg-new.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-plum-dark via-plum-dark/95 to-plum-dark/85"></div>
+
+      <div class="container relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Left Column: Primary Copy & CTAs (7 Columns) -->
+          <div class="lg:col-span-7 bg-plum-dark/80 border border-gold/40 rounded-3xl p-8 sm:p-12 backdrop-blur-xl shadow-2xl" data-reveal="fade-right">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-3 h-3 rounded-full bg-gold animate-ping"></span>
+              <span class="text-xs uppercase tracking-widest text-gold font-bold">2026 Permanent Collection Accession</span>
+            </div>
+
+            <h2 class="font-serif text-3xl sm:text-5xl text-cream font-light mb-6 leading-tight">
+              Curate Your Own Museum-Worthy Sugarcraft Portfolio
+            </h2>
+
+            <p class="body-base text-ivory/80 leading-relaxed mb-8 max-w-xl">
+              Every masterclass project is professionally captured in our high-resolution lighting studio for your international portfolio accession. Transform raw sugar into heirloom sculptures worthy of high-fashion bridal editorials.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="schedule.html" class="btn btn-gold btn-lg">
+                <span>View 2026 Exhibition Schedule</span>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="register.html" class="btn btn-outline-cream btn-lg">Submit Student Application</a>
+            </div>
+          </div>
+
+          <!-- Right Column: Curatorial Inclusions & Archival Highlights (5 Columns) -->
+          <div class="lg:col-span-5 flex flex-col gap-5" data-reveal="fade-left" data-reveal-delay="150">
+            
+            <div class="bg-white/10 backdrop-blur-md border border-gold/30 rounded-2xl p-6 shadow-xl">
+              <div class="flex items-center gap-3 mb-2 text-gold">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <h4 class="font-serif text-lg font-semibold text-cream">4K Studio Capture Studio</h4>
+              </div>
+              <p class="text-xs text-ivory/70 leading-relaxed">Dedicated professional camera setup with soft-box lighting to capture crisp macro details for your website & print lookbook.</p>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-md border border-gold/30 rounded-2xl p-6 shadow-xl">
+              <div class="flex items-center gap-3 mb-2 text-gold">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 15l-2 5l9-11h-7l2-5l-9 11h7z"/></svg>
+                <h4 class="font-serif text-lg font-semibold text-cream">Certified Master Diploma Seal</h4>
+              </div>
+              <p class="text-xs text-ivory/70 leading-relaxed">Official embossed Sugar Bloom Academy diploma seal certifying your 5-tier structural competency and sugar technique mastery.</p>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-md border border-gold/30 rounded-2xl p-6 shadow-xl">
+              <div class="flex items-center gap-3 mb-2 text-gold">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <h4 class="font-serif text-lg font-semibold text-cream">Lifetime Archival Registry</h4>
+              </div>
+              <p class="text-xs text-ivory/70 leading-relaxed">Permanent accession number assigned to your portfolio masterwork in the Sugar Bloom Alumni Digital Registry.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-bg-glow"></div>
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Story -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="assets/images/brand-icon.png" alt="Sugar Bloom Logo" class="w-10 h-10 rounded-full border border-gold object-cover">
+            <span class="footer-brand-title">Sugar Bloom</span>
+          </div>
+          <p class="footer-brand-desc">
+            A boutique atelier and academy dedicated to master-level cake decorating, sugar flower craftsmanship, and contemporary patisserie design.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Instagram"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="#" class="social-icon" aria-label="Pinterest"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2 (Editorial)</a></li>
+            <li><a href="workshops.html">Workshops</a></li>
+            <li><a href="schedule.html">Class Schedule</a></li>
+            <li><a href="gallery.html">Mastery Gallery</a></li>
+            <li><a href="about.html">About Studio</a></li>
+          </ul>
+        </div>
+
+        <!-- Workshop Categories -->
+        <div>
+          <h4 class="footer-heading">Curriculum</h4>
+          <ul class="footer-links">
+            <li><a href="workshops.html#sugar-flowers">Sugar Flowers</a></li>
+            <li><a href="workshops.html#wedding-tiers">Tiered Wedding Cakes</a></li>
+            <li><a href="workshops.html#fondant-sculpting">Fondant Sculpting</a></li>
+            <li><a href="workshops.html#wafer-paper">Wafer Paper Art</a></li>
+            <li><a href="tools.html">Studio Tools Kit</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="footer-heading">Contact Atelier</h4>
+          <ul class="footer-links text-sm space-y-3">
+            <li class="flex items-start gap-2.5 text-blush">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" class="text-gold shrink-0 mt-0.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>742 Evergreen Atelier Way,<br>Suite 400, New York, NY</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" class="text-gold shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+18005557842" class="hover:text-rose transition">+1 (800) 555-SUGAR</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" class="text-gold shrink-0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:hello@sugarbloomacademy.com" class="hover:text-rose transition">hello@sugarbloomacademy.com</a>
+            </li>
+            <li class="flex items-center gap-2.5 text-blush text-xs">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" class="text-gold shrink-0"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Mon - Sat: 9:00 AM - 6:00 PM EST</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h4 class="footer-heading">The Atelier Journal</h4>
+          <p class="text-xs text-blush mb-4 leading-relaxed">Subscribe to receive exclusive class announcements, recipes, and decorating guides.</p>
+          <form data-validate-form data-success-message="Thank you for subscribing!" class="footer-newsletter-form">
+            <input type="email" class="footer-newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm w-full">Join Newsletter</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sugar Bloom Academy. All rights reserved. Crafting sweet elegance worldwide.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-gold transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-gold transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-gold transition-colors">Class Policies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/gallery.js?v=129"></script>
+</body>
+</html>

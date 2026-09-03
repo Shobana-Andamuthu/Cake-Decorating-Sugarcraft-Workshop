@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools & Materials — Sugar Bloom Academy Studio Equipment</title>
+  <link rel="icon" type="image/png" href="assets/images/brand-icon.png">
+  <meta name="description" content="Discover the professional Agboss turntables, Japanese offset blades, 24K gold foil, and organic ingredients provided at Sugar Bloom Academy workstations.">
+  
+  <!-- Google Fonts & Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FAF6F0',
+            ivory: '#F5EDE0',
+            blush: '#E8C4B8',
+            rose: '#C9856A',
+            'rose-deep': '#A85C42',
+            plum: '#5C3D3D',
+            'plum-dark': '#3B2424',
+            gold: '#C9A96E',
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Jost', 'sans-serif'],
+            script: ['Great Vibes', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/navbar-footer.css">
+  <link rel="stylesheet" href="assets/css/tools.css">
+</head>
+<body class="bg-cream text-plum-dark font-sans antialiased overflow-x-hidden">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="site-navbar transparent">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" id="nav-brand">
+        <img src="assets/images/brand-icon.png" alt="Sugar Bloom Academy Logo" class="navbar-logo-img">
+        <div>
+          <span class="navbar-brand-text text-cream">Sugar Bloom</span>
+          <span class="navbar-brand-tagline text-gold">Studio Equipment</span>
+        </div>
+      </a>
+
+      <nav class="navbar-nav" id="desktop-nav">
+        <div class="nav-dropdown-wrap">
+          <button type="button" class="nav-link nav-dropdown-btn text-cream hover:text-gold">
+            <span>Home</span>
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="nav-dropdown-item">Home 1 (Art Atelier)</a>
+            <a href="home-2.html" class="nav-dropdown-item">Home 2 (Editorial Journal)</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link text-cream hover:text-gold">About</a>
+        <a href="workshops.html" class="nav-link text-cream hover:text-gold">Workshops</a>
+        <a href="schedule.html" class="nav-link text-cream hover:text-gold">Schedule</a>
+        <a href="tools.html" class="nav-link active">Tools & Materials</a>
+        <a href="gallery.html" class="nav-link text-cream hover:text-gold">Gallery</a>
+        <a href="contact.html" class="nav-link text-cream hover:text-gold">Contact</a>
+      </nav>
+
+      <div class="nav-actions flex items-center gap-2">
+        <button type="button" class="theme-toggle-btn" aria-label="Switch Theme">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <span>Dark</span>
+        </button>
+        <button type="button" class="rtl-toggle-btn" aria-label="Switch Direction">RTL</button>
+        <a href="register.html" class="btn btn-primary btn-sm hidden sm:inline-flex" id="nav-register-btn">Enroll Now</a>
+        <button class="mobile-menu-toggle text-cream" aria-label="Toggle navigation menu" id="mobile-toggle-btn">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-overlay"></div>
+    <div class="drawer-content">
+      <div>
+        <div class="drawer-header">
+          <div class="drawer-brand-wrap">
+            <img src="assets/images/brand-icon.png" alt="Sugar Bloom Logo" class="w-8 h-8 rounded-full object-cover border border-gold shrink-0">
+            <span class="drawer-brand-text">Sugar Bloom</span>
+          </div>
+          <div class="drawer-controls-wrap">
+            <button type="button" class="theme-toggle-btn" aria-label="Switch Theme">Dark</button>
+            <button type="button" class="rtl-toggle-btn" aria-label="Switch Direction">RTL</button>
+            <button class="drawer-close" aria-label="Close menu">&times;</button>
+          </div>
+        </div>
+
+        <nav class="drawer-nav">
+          <div class="drawer-dropdown-wrap">
+            <button type="button" class="drawer-link drawer-dropdown-btn flex items-center justify-between w-full">
+              <span>Home</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="drawer-dropdown-menu">
+              <a href="index.html" class="drawer-sublink">Home 1 (Art Atelier)</a>
+              <a href="home-2.html" class="drawer-sublink">Home 2 (Editorial Journal)</a>
+            </div>
+          </div>
+          <a href="about.html" class="drawer-link">About</a>
+          <a href="workshops.html" class="drawer-link">Workshops</a>
+          <a href="schedule.html" class="drawer-link">Schedule</a>
+          <a href="tools.html" class="drawer-link active">Tools & Materials</a>
+          <a href="gallery.html" class="drawer-link">Gallery</a>
+          <a href="contact.html" class="drawer-link">Contact</a>
+          <a href="login.html" class="drawer-link">Login</a>
+          <a href="register.html" class="drawer-link">Register</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-border text-center">
+        <a href="register.html" class="btn btn-primary w-full text-center">Enroll in Workshop</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= SECTION 1: HERO ================= -->
+    <section class="tm-hero-banner">
+      <img src="assets/images/tm-hero-new-2.jpg" alt="Flat lay photography of cake decorating tools" class="tm-hero-bg">
+      <div class="container relative z-10">
+        <div class="max-w-2xl" data-reveal="fade-right">
+          <div class="flex items-center gap-2 text-xs uppercase tracking-widest text-gold mb-3 font-semibold">
+            <a href="index.html" class="hover:text-cream">Sugar Bloom</a>
+            <span>/</span>
+            <span>Atelier</span>
+            <span>/</span>
+            <span class="text-cream">Tools & Materials</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-6xl text-white font-normal mb-4 leading-tight">
+            Master Studio Tools & Artisan Ingredients
+          </h1>
+
+          <p class="body-lg text-ivory/90">
+            Uncompromising craftsmanship requires precision equipment. Discover the professional workstations, Japanese steel blades, and organic mediums provided for your masterclass.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 2: INSIDE YOUR WORKSHOP KIT ================= -->
+    <section class="tm-kit-section">
+      <div class="container">
+        <div class="tm-kit-grid">
+          
+          <div data-reveal="fade-right">
+            <span class="overline">Professional Setup</span>
+            <h2 class="heading-1 text-plum-dark mt-2">Inside Your Workshop Kit</h2>
+            <p class="body-sm text-muted mt-4 mb-4 leading-relaxed">
+              When you arrive at Sugar Bloom Academy, your personal workstation is fully pre-set with commercial-grade, artisan equipment. We eliminate the frustration of flimsy plastic utensils so you can focus entirely on executing razor-sharp ganache geometry, impasto palette knife flowers, and delicate sugar flora.
+            </p>
+            <p class="body-sm text-muted mb-6 leading-relaxed">
+              Every tool in your kit has been rigorously selected and custom-tested by Chef Vivienne LaRue. From weighted turntables to surgical-grade scalpel blades, experience the effortless precision that true master-level tools provide.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-border mb-6">
+              <div class="tm-kit-card p-4 rounded-xl border border-border bg-ivory/60">
+                <span class="text-xs font-bold text-rose uppercase tracking-wider block mb-1">Heavy Turntables</span>
+                <span class="font-serif text-base text-plum-dark font-semibold block">Agboss Cast Aluminum</span>
+                <span class="text-xs text-muted block mt-0.5">Weighted 360° dual ball-bearing rotation</span>
+              </div>
+              <div class="tm-kit-card p-4 rounded-xl border border-border bg-ivory/60">
+                <span class="text-xs font-bold text-rose uppercase tracking-wider block mb-1">Palette Blades</span>
+                <span class="font-serif text-base text-plum-dark font-semibold block">Japanese Flexible Steel</span>
+                <span class="text-xs text-muted block mt-0.5">Tempered impasto petal sculpting blades</span>
+              </div>
+              <div class="tm-kit-card p-4 rounded-xl border border-border bg-ivory/60">
+                <span class="text-xs font-bold text-rose uppercase tracking-wider block mb-1">Levelling Discs</span>
+                <span class="font-serif text-base text-plum-dark font-semibold block">Acrylic 90° Plates</span>
+                <span class="text-xs text-muted block mt-0.5">Clear 6" & 8" plates for razor-sharp ganache</span>
+              </div>
+              <div class="tm-kit-card p-4 rounded-xl border border-border bg-ivory/60">
+                <span class="text-xs font-bold text-rose uppercase tracking-wider block mb-1">Floral Veining</span>
+                <span class="font-serif text-base text-plum-dark font-semibold block">Food-Grade Silicone</span>
+                <span class="text-xs text-muted block mt-0.5">Custom impressions from fresh garden blooms</span>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="relative" data-reveal="fade-left">
+            <img src="assets/images/tm-kit-new.jpg" alt="Complete Sugar Bloom Academy take-home tool kit" class="rounded-2xl shadow-xl w-full object-cover h-[440px]">
+            <div class="absolute -bottom-6 -right-6 bg-plum-dark text-cream p-5 rounded-xl border border-gold shadow-2xl max-w-xs hidden sm:block">
+              <span class="font-script text-2xl text-gold block">Take-Home Gift Kit</span>
+              <p class="text-xs text-ivory/80">Every student receives a custom take-home tool set upon graduation.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3: INTERACTIVE TOOL LABELS OVER IMAGE ================= -->
+    <section class="tm-hotspot-section">
+      <div class="container">
+        
+        <div class="text-center max-w-xl mx-auto" data-reveal="fade-up">
+          <span class="overline">Interactive Workstation</span>
+          <h2 class="heading-1 text-plum-dark mt-2">Explore Workstation Equipment</h2>
+          <p class="body-sm text-muted mt-2">Hover over or click any numbered pin to inspect individual tool specifications.</p>
+        </div>
+
+        <div class="tm-hotspot-container" data-reveal="scale-in">
+          <img src="assets/images/tm-hero-new-2.jpg" alt="Marble bakery workstation with cake decorating equipment" class="tm-hotspot-bg">
+
+          <!-- Pin 1: Piping Nozzles -->
+          <div class="tm-pin" style="top: 25%; left: 30%;">
+            <div class="tm-pin-btn">1</div>
+            <div class="tm-popover">
+              <h3 class="font-serif text-lg font-bold text-plum-dark mb-1">Piping Nozzles & Couplers</h3>
+              <p class="text-xs text-muted">Seamless stainless steel 1M, 2D, and 104 rose tips with quick-twist couplers.</p>
+            </div>
+          </div>
+
+          <!-- Pin 2: Turntable -->
+          <div class="tm-pin" style="top: 50%; left: 50%;">
+            <div class="tm-pin-btn">2</div>
+            <div class="tm-popover">
+              <h3 class="font-serif text-lg font-bold text-plum-dark mb-1">Agboss Heavy Turntable</h3>
+              <p class="text-xs text-muted">Dual ball-bearing cast aluminum turntable for smooth 360° ganache leveling.</p>
+            </div>
+          </div>
+
+          <!-- Pin 3: Palette Knives -->
+          <div class="tm-pin" style="top: 35%; left: 75%;">
+            <div class="tm-pin-btn">3</div>
+            <div class="tm-popover">
+              <h3 class="font-serif text-lg font-bold text-plum-dark mb-1">Japanese Offset Blades</h3>
+              <p class="text-xs text-muted">Ultra-flexible tempered steel impasto blades designed for oil-canvas style buttercream flowers.</p>
+            </div>
+          </div>
+
+          <!-- Pin 4: Fondant Tools -->
+          <div class="tm-pin" style="top: 70%; left: 25%;">
+            <div class="tm-pin-btn">4</div>
+            <div class="tm-popover">
+              <h3 class="font-serif text-lg font-bold text-plum-dark mb-1">Fondant Sculpting Scribes</h3>
+              <p class="text-xs text-muted">Dual-ended steel scribes, bone tools, and petal veiners for gumpaste sculpting.</p>
+            </div>
+          </div>
+
+          <!-- Pin 5: Acrylic Scrapers -->
+          <div class="tm-pin" style="top: 65%; left: 70%;">
+            <div class="tm-pin-btn">5</div>
+            <div class="tm-popover">
+              <h3 class="font-serif text-lg font-bold text-plum-dark mb-1">Acrylic 90° Levelling Plates</h3>
+              <p class="text-xs text-muted">Clear 6", 8", and 10" acrylic levelling disks yielding razor-sharp ganache edges.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4: PROVIDED BY THE STUDIO ================= -->
+    <section class="tm-provided-section">
+      <div class="container">
+        
+        <div class="text-center max-w-xl mx-auto" data-reveal="fade-up">
+          <span class="overline">Studio Inclusions</span>
+          <h2 class="heading-1 text-plum-dark mt-2">Provided by the Studio</h2>
+        </div>
+
+        <div class="tm-provided-list">
+          
+          <div class="tm-provided-item" data-reveal="fade-up">
+            <div class="tm-provided-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-xl font-semibold text-plum-dark">Commercial Agostoni Chocolate Warmers</h3>
+              <p class="text-xs text-muted mt-1">Digital waterless tempering warmers that maintain couverture ganache at precisely 31°C throughout class.</p>
+            </div>
+          </div>
+
+          <div class="tm-provided-item" data-reveal="fade-up" data-reveal-delay="100">
+            <div class="tm-provided-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-xl font-semibold text-plum-dark">Florentine 24K Edible Gold Leaf Sheets</h3>
+              <p class="text-xs text-muted mt-1">Genuine 24-karat edible gold foil transfer sheets and specialized gilding brushes provided for tier accents.</p>
+            </div>
+          </div>
+
+          <div class="tm-provided-item" data-reveal="fade-up" data-reveal-delay="200">
+            <div class="tm-provided-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343"/></svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-xl font-semibold text-plum-dark">Botanical Petal Dust & Veiner Library</h3>
+              <p class="text-xs text-muted mt-1">Access to 40+ botanical food-safe petal dusts, silicone rose veiners, and stainless steel leaf cutters.</p>
+            </div>
+          </div>
+
+          <div class="tm-provided-item" data-reveal="fade-up" data-reveal-delay="300">
+            <div class="tm-provided-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253"/></svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-xl font-semibold text-plum-dark">Monogrammed Linen Studio Apron</h3>
+              <p class="text-xs text-muted mt-1">Custom embroidered Sugar Bloom Academy cotton-linen apron to keep and wear during every session.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5: WHAT TO BRING CHECKLIST & STUDENT PREPARATION ================= -->
+    <section class="tm-bring-section">
+      <div class="container">
+        
+        <div class="text-center max-w-3xl mx-auto mb-10" data-reveal="fade-up">
+          <span class="overline text-gold">Student Preparation</span>
+          <h2 class="heading-1 text-white mt-2">What You Need to Bring & Expect</h2>
+          <p class="body-base text-ivory/80 mt-3 leading-relaxed">
+            At Sugar Bloom Academy, we elevate learning fine sugarcraft into a seamless, luxury atelier experience. Every workstation comes fully pre-set with sterilised commercial equipment, imported European ingredients, chef linen aprons, and master specification workbooks. You only need to bring a few personal essentials to maximize your practical studio sessions.
+          </p>
+        </div>
+
+        <div class="tm-checklist-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          
+          <div class="tm-check-item" data-reveal="fade-up">
+            <div class="tm-check-box">✓</div>
+            <div>
+              <h3 class="font-serif text-xl font-semibold text-cream">Comfortable Studio Footwear</h3>
+              <p class="text-xs text-ivory/70 mt-1.5 leading-relaxed">Closed-toe non-slip shoes or supportive sneakers designed for standing comfortably at marble workstations during 6-hour hands-on sessions.</p>
+            </div>
+          </div>
+
+          <div class="tm-check-item" data-reveal="fade-up" data-reveal-delay="100">
+            <div class="tm-check-box">✓</div>
+            <div>
+              <h3 class="font-serif text-xl font-semibold text-cream">Personal Notebook or Tablet</h3>
+              <p class="text-xs text-ivory/70 mt-1.5 leading-relaxed">To jot down custom gel tinting formulas, temperature charts, icing consistency adjustments, and personalized instructor feedback during live demos.</p>
+            </div>
+          </div>
+
+          <div class="tm-check-item" data-reveal="fade-up" data-reveal-delay="200">
+            <div class="tm-check-box">✓</div>
+            <div>
+              <h3 class="font-serif text-xl font-semibold text-cream">Smartphone or Studio Camera</h3>
+              <p class="text-xs text-ivory/70 mt-1.5 leading-relaxed">For step-by-step video capturing during complex techniques and studio portfolio photos at our end-of-class lightbox photo station.</p>
+            </div>
+          </div>
+
+          <div class="tm-check-item" data-reveal="fade-up" data-reveal-delay="300">
+            <div class="tm-check-box">✓</div>
+            <div>
+              <h3 class="font-serif text-xl font-semibold text-cream">Cake Transport Container Box</h3>
+              <p class="text-xs text-ivory/70 mt-1.5 leading-relaxed">A tall cake carrier or sturdy cardboard box (min 10" x 10" x 14") with anti-slip base mats to safely transport your finished multi-tiered creation home.</p>
+            </div>
+          </div>
+
+          <div class="tm-check-item" data-reveal="fade-up" data-reveal-delay="400">
+            <div class="tm-check-box">✓</div>
+            <div>
+              <h3 class="font-serif text-xl font-semibold text-cream">Hair Tie & Studio Attire</h3>
+              <p class="text-xs text-ivory/70 mt-1.5 leading-relaxed">Hair ties or bands for long hair. We provide embroidered studio linen aprons to protect your clothing, but recommend short sleeves or fitted sleeves.</p>
+            </div>
+          </div>
+
+          <div class="tm-check-item" data-reveal="fade-up" data-reveal-delay="500">
+            <div class="tm-check-box">✓</div>
+            <div>
+              <h3 class="font-serif text-xl font-semibold text-cream">Passion for Fine Sugarcraft</h3>
+              <p class="text-xs text-ivory/70 mt-1.5 leading-relaxed">An enthusiastic focus on refining wrist mechanics, absorbing structural physics, and joining an intimate group of 8 dedicated cake artists.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 6: INGREDIENTS WE WORK WITH ================= -->
+    <section class="tm-ing-section">
+      <div class="container">
+        
+        <div class="text-center max-w-xl mx-auto" data-reveal="fade-up">
+          <span class="overline">Artisan Ingredients</span>
+          <h2 class="heading-1 text-plum-dark mt-2">Ingredients We Work With</h2>
+          <p class="body-sm text-muted mt-2">We source organic, non-GMO, and luxury European patisserie ingredients.</p>
+        </div>
+
+        <div class="tm-ing-grid">
+          
+          <div class="tm-ing-card" data-reveal="fade-up">
+            <img src="assets/images/tm-ing-1-new.jpg" alt="French butter and Madagascar vanilla beans">
+            <div class="p-4">
+              <h3 class="font-serif text-lg font-bold text-plum-dark">Normandy French Butter</h3>
+              <p class="text-xs text-muted mt-1">84% butterfat French butter for silky Swiss meringue buttercream.</p>
+            </div>
+          </div>
+
+          <div class="tm-ing-card" data-reveal="fade-up" data-reveal-delay="100">
+            <img src="assets/images/tm-ing-2-new.jpg" alt="Agostoni 70% dark chocolate couverture disks">
+            <div class="p-4">
+              <h3 class="font-serif text-lg font-bold text-plum-dark">Agostoni 70% Couverture</h3>
+              <p class="text-xs text-muted mt-1">Italian dark chocolate for rigid 90-degree ganache undercoats.</p>
+            </div>
+          </div>
+
+          <div class="tm-ing-card" data-reveal="fade-up" data-reveal-delay="200">
+            <img src="assets/images/tm-ing-3-new.jpg" alt="Organic sugar crystals and gumpaste powder">
+            <div class="p-4">
+              <h3 class="font-serif text-lg font-bold text-plum-dark">Organic Gumpaste & Tylose</h3>
+              <p class="text-xs text-muted mt-1">Ultra-elastic sugar paste engineered for paper-thin floral petals.</p>
+            </div>
+          </div>
+
+          <div class="tm-ing-card" data-reveal="fade-up" data-reveal-delay="300">
+            <img src="assets/images/tm-ing-4-new.jpg" alt="24K Florentine edible gold leaf sheets">
+            <div class="p-4">
+              <h3 class="font-serif text-lg font-bold text-plum-dark">24K Florentine Gold Foil</h3>
+              <p class="text-xs text-muted mt-1">Edible 24-karat gold transfer sheets for luxury tier accents.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 7: BEGINNER FRIENDLY FAQ ACCORDION ================= -->
+    <section class="tm-faq-section">
+      <div class="container">
+        
+        <div class="text-center max-w-xl mx-auto" data-reveal="fade-up">
+          <span class="overline">Frequently Asked Questions</span>
+          <h2 class="heading-1 text-plum-dark mt-2">Beginner & Equipment FAQ</h2>
+        </div>
+
+        <div class="tm-faq-container">
+          
+          <div class="tm-faq-item active" data-reveal="fade-up">
+            <button class="tm-faq-header">
+              <span>Do I need to purchase expensive tools before attending?</span>
+              <span class="tm-faq-icon">+</span>
+            </button>
+            <div class="tm-faq-body">
+              <p class="text-xs text-muted leading-relaxed">
+                No! Every student receives a fully pre-set workstation equipped with commercial Agboss turntables, acrylic plates, and palette knives. You do not need to buy anything prior to class.
+              </p>
+            </div>
+          </div>
+
+          <div class="tm-faq-item" data-reveal="fade-up" data-reveal-delay="100">
+            <button class="tm-faq-header">
+              <span>Can I take my tool kit home after graduation?</span>
+              <span class="tm-faq-icon">+</span>
+            </button>
+            <div class="tm-faq-body">
+              <p class="text-xs text-muted leading-relaxed">
+                Yes! Every enrolled student receives a custom Sugar Bloom Academy take-home tool kit including silicone veiners, acrylic plates, offset knives, and a monogrammed linen apron.
+              </p>
+            </div>
+          </div>
+
+          <div class="tm-faq-item" data-reveal="fade-up" data-reveal-delay="200">
+            <button class="tm-faq-header">
+              <span>What if I have severe dietary allergies (gluten, dairy, or nuts)?</span>
+              <span class="tm-faq-icon">+</span>
+            </button>
+            <div class="tm-faq-body">
+              <p class="text-xs text-muted leading-relaxed">
+                We accommodate dietary requirements by providing high-density foam practice cake tiers for sculpting and allergen-safe buttercream formulations upon advance request.
+              </p>
+            </div>
+          </div>
+
+          <div class="tm-faq-item" data-reveal="fade-up" data-reveal-delay="300">
+            <button class="tm-faq-header">
+              <span>Are voltage transformers provided for international tools?</span>
+              <span class="tm-faq-icon">+</span>
+            </button>
+            <div class="tm-faq-body">
+              <p class="text-xs text-muted leading-relaxed">
+                Yes, our studio workstations feature built-in dual voltage power hubs (110V US / 220V EU) to accommodate international steamers and chocolate warmers.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= SECTION 8: WORKSHOP CTA ================= -->
+    <section class="tm-cta-banner">
+      <img src="assets/images/tm-cta-new-2.jpg" alt="Baking atelier workstation setup" class="tm-cta-bg">
+      
+      <div class="container relative z-10">
+        <div class="max-w-2xl mx-auto" data-reveal="scale-in">
+          <span class="font-script text-4xl text-gold block mb-2">Claim Your Workstation</span>
+          
+          <h2 class="font-serif text-4xl sm:text-6xl text-white font-normal mb-6">
+            Step Into a Fully Equipped Studio Workstation
+          </h2>
+
+          <p class="body-sm text-ivory/90 mb-8">
+            Experience the joy of baking with professional equipment. Reserve your seat for an upcoming 2026 cohort today.
+          </p>
+
+          <a href="schedule.html" class="btn btn-gold btn-lg">
+            <span>View Schedule & Reserve Seat</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-bg-glow"></div>
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Story -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="assets/images/brand-icon.png" alt="Sugar Bloom Logo" class="w-10 h-10 rounded-full border border-gold object-cover">
+            <span class="footer-brand-title">Sugar Bloom</span>
+          </div>
+          <p class="footer-brand-desc">
+            A boutique atelier and academy dedicated to master-level cake decorating, sugar flower craftsmanship, and contemporary patisserie design.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Instagram"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="#" class="social-icon" aria-label="Pinterest"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2 (Editorial)</a></li>
+            <li><a href="workshops.html">Workshops</a></li>
+            <li><a href="schedule.html">Class Schedule</a></li>
+            <li><a href="gallery.html">Mastery Gallery</a></li>
+            <li><a href="about.html">About Studio</a></li>
+          </ul>
+        </div>
+
+        <!-- Workshop Categories -->
+        <div>
+          <h4 class="footer-heading">Curriculum</h4>
+          <ul class="footer-links">
+            <li><a href="workshops.html#sugar-flowers">Sugar Flowers</a></li>
+            <li><a href="workshops.html#wedding-tiers">Tiered Wedding Cakes</a></li>
+            <li><a href="workshops.html#fondant-sculpting">Fondant Sculpting</a></li>
+            <li><a href="workshops.html#wafer-paper">Wafer Paper Art</a></li>
+            <li><a href="tools.html">Studio Tools Kit</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="footer-heading">Contact Atelier</h4>
+          <ul class="footer-links text-sm space-y-3">
+            <li class="flex items-start gap-2.5 text-blush">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" class="text-gold shrink-0 mt-0.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>742 Evergreen Atelier Way,<br>Suite 400, New York, NY</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" class="text-gold shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+18005557842" class="hover:text-rose transition">+1 (800) 555-SUGAR</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" class="text-gold shrink-0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:hello@sugarbloomacademy.com" class="hover:text-rose transition">hello@sugarbloomacademy.com</a>
+            </li>
+            <li class="flex items-center gap-2.5 text-blush text-xs">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" class="text-gold shrink-0"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Mon - Sat: 9:00 AM - 6:00 PM EST</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h4 class="footer-heading">The Atelier Journal</h4>
+          <p class="text-xs text-blush mb-4 leading-relaxed">Subscribe to receive exclusive class announcements, recipes, and decorating guides.</p>
+          <form data-validate-form data-success-message="Thank you for subscribing!" class="footer-newsletter-form">
+            <input type="email" class="footer-newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter">
+            <button type="submit" class="btn btn-primary btn-sm w-full">Join Newsletter</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sugar Bloom Academy. All rights reserved. Crafting sweet elegance worldwide.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-gold transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-gold transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-gold transition-colors">Class Policies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/tools.js"></script>
+</body>
+</html>
