@@ -925,10 +925,15 @@ main, section, header, footer, nav, article, aside, div {
   box-sizing: border-box;
 }
 
-/* Constrain all visual media */
+/* Constrain all visual media & Disable browser image search / Google Lens overlays */
 img, video, canvas, svg, picture, iframe {
   max-width: 100% !important;
   height: auto;
+}
+
+img {
+  pointer-events: auto;
+  -webkit-user-drag: none;
 }
 
 /* Flex and Grid Container Responsiveness */

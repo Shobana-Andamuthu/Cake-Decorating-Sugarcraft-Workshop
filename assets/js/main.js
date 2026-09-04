@@ -15,12 +15,25 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
 });
 
-// Run immediate theme & dir setup to prevent flashing
+// Run immediate theme & dir setup to prevent flashing & disable Edge visual search
 (function setupInitialThemeAndDir() {
   const savedTheme = localStorage.getItem('sugar_bloom_theme') || 'light';
   const savedDir = localStorage.getItem('sugar_bloom_dir') || 'ltr';
   document.documentElement.setAttribute('data-theme', savedTheme);
   document.documentElement.setAttribute('dir', savedDir);
+
+  function disableEdgeVisualSearch() {
+    document.querySelectorAll('img').forEach(img => {
+      img.setAttribute('nopin', 'nopin');
+      img.setAttribute('data-no-lens', 'true');
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', disableEdgeVisualSearch);
+  } else {
+    disableEdgeVisualSearch();
+  }
 })();
 
 
