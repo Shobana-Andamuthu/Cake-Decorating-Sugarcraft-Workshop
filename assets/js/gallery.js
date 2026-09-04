@@ -49,47 +49,136 @@ function initMediumTabs() {
 
 function initGalleryFilters() {
   const filterPills = document.querySelectorAll('.gal-filter-pill');
-  const items = document.querySelectorAll('.gal-item');
+  const items = Array.from(document.querySelectorAll('.gal-item'));
   const gridContainer = document.querySelector('.gal-masonry-grid');
+  const paginationContainer = document.getElementById('gal-pagination');
+  const pageNumbersContainer = document.getElementById('gal-page-numbers');
+  const prevBtn = document.getElementById('gal-prev-btn');
+  const nextBtn = document.getElementById('gal-next-btn');
 
   if (!filterPills.length || !items.length) return;
 
+  const ITEMS_PER_PAGE = 6;
+  let currentPage = 1;
+  let activeCategory = 'all';
+  let filteredItems = [...items];
+
+  function renderPaginationControls(totalPages) {
+    if (!paginationContainer || !pageNumbersContainer) return;
+
+    if (totalPages <= 1) {
+      paginationContainer.style.display = 'none';
+      return;
+    }
+
+    paginationContainer.style.display = 'flex';
+    pageNumbersContainer.innerHTML = '';
+
+    for (let i = 1; i <= totalPages; i++) {
+      const numBtn = document.createElement('button');
+      numBtn.type = 'button';
+      numBtn.className = `gal-page-num ${i === currentPage ? 'active' : ''}`;
+      numBtn.textContent = i;
+      numBtn.setAttribute('aria-label', `Page ${i}`);
+      numBtn.addEventListener('click', () => {
+        if (currentPage !== i) {
+          currentPage = i;
+          applyGalleryState();
+          scrollToGalleryTop();
+        }
+      });
+      pageNumbersContainer.appendChild(numBtn);
+    }
+
+    if (prevBtn) prevBtn.disabled = (currentPage === 1);
+    if (nextBtn) nextBtn.disabled = (currentPage === totalPages);
+  }
+
+  function scrollToGalleryTop() {
+    if (gridContainer) {
+      gridContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function applyGalleryState() {
+    // 1. Filter items based on activeCategory
+    filteredItems = items.filter(item => {
+      const itemCategory = (item.dataset.category || '').toLowerCase();
+      return activeCategory === 'all' || itemCategory.includes(activeCategory);
+    });
+
+    const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE) || 1;
+
+    // Safety check on currentPage bounds
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+
+    // Determine current page index slice
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const visibleOnPage = filteredItems.slice(startIndex, endIndex);
+
+    // Grid container maintains clean responsive grid layout & updates visible item count attribute
+    if (gridContainer) {
+      gridContainer.classList.remove('is-filtered');
+      gridContainer.setAttribute('data-count', visibleOnPage.length);
+    }
+
+    // Synchronously show/hide items to eliminate flickering, ghost duplicates, or delayed layout reflows
+    items.forEach(item => {
+      if (visibleOnPage.includes(item)) {
+        item.style.display = '';
+        item.style.opacity = '1';
+        item.style.transform = 'scale(1)';
+        item.classList.remove('hidden-by-filter');
+      } else {
+        item.style.display = 'none';
+        item.style.opacity = '0';
+        item.style.transform = 'scale(1)';
+        item.classList.add('hidden-by-filter');
+      }
+    });
+
+    // Render pagination controls
+    renderPaginationControls(totalPages);
+  }
+
+  // Filter Pill Click Handlers
   filterPills.forEach(pill => {
     pill.addEventListener('click', () => {
       filterPills.forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
 
-      const targetCategory = pill.dataset.filter.toLowerCase();
-
-      if (gridContainer) {
-        if (targetCategory === 'all') {
-          gridContainer.classList.remove('is-filtered');
-        } else {
-          gridContainer.classList.add('is-filtered');
-        }
-      }
-
-      items.forEach(item => {
-        const itemCategory = (item.dataset.category || '').toLowerCase();
-
-        if (targetCategory === 'all' || itemCategory.includes(targetCategory)) {
-          item.style.display = '';
-          item.classList.remove('hidden-by-filter');
-          setTimeout(() => {
-            item.style.opacity = '1';
-            item.style.transform = 'scale(1)';
-          }, 40);
-        } else {
-          item.style.opacity = '0';
-          item.style.transform = 'scale(0.95)';
-          item.classList.add('hidden-by-filter');
-          setTimeout(() => {
-            item.style.display = 'none';
-          }, 250);
-        }
-      });
+      activeCategory = pill.dataset.filter.toLowerCase();
+      currentPage = 1; // Reset to page 1 when category changes
+      applyGalleryState();
     });
   });
+
+  // Prev / Next button listeners
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        applyGalleryState();
+        scrollToGalleryTop();
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
+      if (currentPage < totalPages) {
+        currentPage++;
+        applyGalleryState();
+        scrollToGalleryTop();
+      }
+    });
+  }
+
+  // Initial render on load
+  applyGalleryState();
 }
 
 function initGalleryLightbox() {

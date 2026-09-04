@@ -148,6 +148,7 @@ html[data-theme="dark"] .site-navbar.scrolled .mobile-menu-toggle {
   align-items: center;
   gap: var(--space-3);
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .navbar-logo-img {
@@ -181,11 +182,20 @@ html[data-theme="dark"] .site-navbar.scrolled .mobile-menu-toggle {
   display: block;
 }
 
-/* Navigation Links */
+/* Navigation Links - Centered Layout with Balanced Equal Margins */
 .navbar-nav {
   display: flex;
   align-items: center;
-  gap: clamp(1.25rem, 2.5vw, 2.25rem);
+  gap: clamp(0.75rem, 1.25vw, 1.35rem);
+  margin-left: clamp(1.25rem, 2.5vw, 2.75rem);
+  margin-right: clamp(1.25rem, 2.5vw, 2.75rem);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem !important;
+  flex-shrink: 0;
 }
 
 .nav-link {
@@ -196,6 +206,7 @@ html[data-theme="dark"] .site-navbar.scrolled .mobile-menu-toggle {
   letter-spacing: 0.03em;
   position: relative;
   padding: 0.5rem 0;
+  white-space: nowrap;
   transition: color var(--dur-fast) var(--ease-smooth);
 }
 
