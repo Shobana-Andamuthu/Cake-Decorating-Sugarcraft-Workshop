@@ -658,14 +658,15 @@
   text-align: left;
   flex: 1;
   max-width: 26ch;
-  min-height: 12.5rem;
+  min-height: 11.2rem;
   display: flex;
   align-items: flex-start;
+  margin-bottom: 0.25rem;
 }
 
 .atelier-feature-meta {
-  margin-top: 1.2rem;
-  padding-top: 0.7rem;
+  margin-top: 0.55rem;
+  padding-top: 0.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
@@ -677,7 +678,7 @@
   text-transform: none;
   width: 100%;
   max-width: 100%;
-  min-height: 2.5rem;
+  min-height: 2.3rem;
 }
 
 @media (max-width: 1024px) {
