@@ -580,24 +580,77 @@ html[data-theme="dark"] .bg-cream .text-rose {
   }
 }
 
-/* ── Unified Internal Page First-Section Hero Banner Height & Alignment ── */
+/* ── Unified Internal Page First-Section Hero Banner Height & Aesthetic ── */
 .abt-hero-section,
 .ws-hero-banner,
 .ws-hero-section,
 .wd-hero-section,
-.sched-hero-section,
-.tools-hero-section,
+.sch-hero-section,
+.sch-hero-banner,
 .tm-hero-banner,
 .tm-hero-section,
 .gal-hero-banner,
 .cnt-hero-banner,
 .cnt-hero-section {
-  min-height: clamp(340px, 44vh, 440px) !important;
-  padding-top: calc(var(--navbar-h) + clamp(1.5rem, 4vw, 3rem)) !important;
-  padding-bottom: clamp(2rem, 4vw, 3.5rem) !important;
+  position: relative !important;
+  min-height: 480px !important;
+  height: 480px !important;
+  padding-top: calc(var(--navbar-h, 80px) + 2.5rem) !important;
+  padding-bottom: 2.5rem !important;
+  background-color: var(--clr-plum-dark) !important;
+  color: var(--clr-cream) !important;
   display: flex !important;
   align-items: center !important;
+  overflow: hidden !important;
   box-sizing: border-box !important;
+}
+
+@media (max-width: 640px) {
+  .abt-hero-section,
+  .ws-hero-banner,
+  .ws-hero-section,
+  .wd-hero-section,
+  .sch-hero-section,
+  .sch-hero-banner,
+  .tm-hero-banner,
+  .tm-hero-section,
+  .gal-hero-banner,
+  .cnt-hero-banner,
+  .cnt-hero-section {
+    min-height: 380px !important;
+    height: auto !important;
+    padding-top: calc(var(--navbar-h, 80px) + 2rem) !important;
+    padding-bottom: 2.5rem !important;
+  }
+}
+
+/* Common Background Image Style for Inner Heroes */
+.abt-hero-bg,
+.ws-hero-bg,
+.wd-hero-bg,
+.tm-hero-bg,
+.sch-hero-bg,
+.gal-hero-bg,
+.cnt-hero-bg {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  opacity: 0.35 !important;
+  filter: contrast(1.1) brightness(0.85) !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+/* Common Overlay Gradient for Text Contrast */
+.inner-hero-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(90deg, rgba(59, 36, 36, 0.95) 0%, rgba(59, 36, 36, 0.8) 50%, rgba(59, 36, 36, 0.45) 100%) !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
 }
 
 /* ── Dark Mode Button Hover High-Contrast Overrides ── */
