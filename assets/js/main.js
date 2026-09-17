@@ -59,18 +59,36 @@ function initNavbar() {
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll(); // Initial check
 
-  // Mobile menu drawer toggling
+  // Mobile menu drawer toggling with strict body scroll lock
+  let savedScrollY = 0;
+
   function openDrawer() {
     if (!mobileDrawer) return;
+    savedScrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop || 0;
     mobileDrawer.classList.add('is-active');
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${savedScrollY}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
     document.body.style.overflow = 'hidden';
+    document.body.classList.add('drawer-open');
+    document.documentElement.classList.add('drawer-open');
     if (mobileToggle) mobileToggle.setAttribute('aria-expanded', 'true');
   }
 
   function closeDrawer() {
     if (!mobileDrawer) return;
     mobileDrawer.classList.remove('is-active');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
     document.body.style.overflow = '';
+    document.body.classList.remove('drawer-open');
+    document.documentElement.classList.remove('drawer-open');
+    window.scrollTo(0, savedScrollY);
     if (mobileToggle) mobileToggle.setAttribute('aria-expanded', 'false');
   }
 
@@ -84,6 +102,25 @@ function initNavbar() {
 
   if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
   if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+
+  // Prevent wheel and touch event propagation outside drawer content when drawer is active
+  if (mobileDrawer) {
+    mobileDrawer.addEventListener('touchmove', (e) => {
+      if (!mobileDrawer.classList.contains('is-active')) return;
+      const isInsideContent = e.target.closest('.drawer-content');
+      if (!isInsideContent) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    mobileDrawer.addEventListener('wheel', (e) => {
+      if (!mobileDrawer.classList.contains('is-active')) return;
+      const isInsideContent = e.target.closest('.drawer-content');
+      if (!isInsideContent) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+  }
 
   // Close drawer on ESC key
   window.addEventListener('keydown', (e) => {

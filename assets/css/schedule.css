@@ -3,10 +3,22 @@
    ============================================================ */
 
 /* ── 1. Hero Section ── */
+.sch-hero-section {
+  padding-top: calc(var(--navbar-h, 80px) + 2.75rem) !important;
+  padding-bottom: 4.5rem !important;
+}
+
+@media (min-width: 640px) {
+  .sch-hero-section {
+    padding-top: calc(var(--navbar-h, 80px) + 4rem) !important;
+    padding-bottom: 6rem !important;
+  }
+}
+
 .sch-hero-banner {
   position: relative;
   min-height: 400px;
-  padding-top: calc(var(--navbar-h) + 2rem);
+  padding-top: calc(var(--navbar-h) + 2.75rem);
   padding-bottom: 4rem;
   background: var(--clr-plum-dark);
   color: var(--clr-cream);
@@ -23,6 +35,26 @@
   object-fit: cover;
   opacity: 0.35;
   filter: contrast(1.1) brightness(0.85);
+}
+
+.sch-hero-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  height: 32px !important;
+  padding: 0 0.85rem !important;
+  border-radius: 9999px !important;
+  font-size: 0.725rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  border: 1px solid !important;
+  backdrop-filter: blur(8px) !important;
+  box-sizing: border-box !important;
+  line-height: 1 !important;
+  max-width: 100% !important;
+  white-space: nowrap !important;
 }
 
 /* ── 2. Interactive Month Selector Bar ── */

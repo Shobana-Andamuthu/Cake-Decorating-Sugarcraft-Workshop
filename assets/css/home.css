@@ -81,30 +81,38 @@
 /* Floating cards strictly attached within container bounds */
 .hero-faculty-card {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 1.5rem;
+  left: -1.5rem;
   background: rgba(255, 252, 248, 0.96);
   border: 1px solid rgba(201, 169, 110, 0.5);
   box-shadow: 0 16px 36px rgba(42, 22, 22, 0.15);
   backdrop-filter: blur(12px);
   padding: 0.85rem 1.25rem;
   border-radius: var(--radius-xl);
-  max-width: 210px;
+  max-width: 220px;
   z-index: 20;
 }
 
 .hero-cohort-card {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  background: rgba(59, 36, 36, 0.96);
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: rgba(42, 24, 24, 0.94);
   color: var(--clr-cream);
-  padding: 0.85rem 1.25rem;
+  padding: 0.75rem 1.15rem;
   border-radius: var(--radius-xl);
-  border: 1px solid rgba(201, 169, 110, 0.3);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
+  border: 1.5px solid rgba(201, 169, 110, 0.5);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(12px);
-  z-index: 20;
+  z-index: 25;
+}
+
+.hero-text-overlay {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  padding-right: 220px; /* Leave space so cohort card never overlaps text */
 }
 
 @media (max-width: 1024px) {
@@ -129,6 +137,11 @@
   .hero-cohort-card {
     right: 0;
     bottom: -1rem;
+  }
+
+  .hero-text-overlay {
+    padding-right: 0;
+    bottom: 5.5rem; /* Stack above cohort badge on smaller screens */
   }
 }
 
@@ -554,6 +567,17 @@
   transition: all var(--dur-base) var(--ease-spring);
 }
 
+@media (max-width: 640px) {
+  .btn-cta-giant {
+    padding: 0.85rem 1.15rem !important;
+    font-size: 0.775rem !important;
+    letter-spacing: 0.04em !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    justify-content: center !important;
+  }
+}
+
 .btn-cta-giant:hover {
   transform: translateY(-4px) scale(1.03);
   box-shadow: 0 20px 60px rgba(201, 169, 110, 0.6);
@@ -635,8 +659,12 @@
   align-items: center;
   justify-content: center;
   border-radius: 0.9rem;
-  margin: 0 auto 1.5rem;
+  margin: 0 0 1.25rem 0; /* Aligned to LEFT side of container */
   flex-shrink: 0;
+}
+
+[dir="rtl"] .atelier-feature-icon {
+  margin: 0 0 1.25rem auto; /* Aligned to RIGHT side in RTL */
 }
 
 .atelier-feature-title {
@@ -648,7 +676,12 @@
   color: var(--clr-cream);
   letter-spacing: -0.02em;
   text-wrap: balance;
-  max-width: 12ch;
+  max-width: 14ch;
+}
+
+[dir="rtl"] .atelier-feature-title,
+[dir="rtl"] .atelier-feature-copy {
+  text-align: right;
 }
 
 .atelier-feature-copy {

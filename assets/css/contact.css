@@ -72,13 +72,45 @@
 
 .form-control-float {
   width: 100%;
-  padding: 1.1rem 1.25rem 0.6rem;
+  height: 52px;
+  padding: 1.25rem 1.25rem 0.35rem;
   background: var(--clr-cream);
-  border: 1px solid var(--clr-border);
+  border: 1.5px solid var(--clr-border);
   border-radius: var(--radius-lg);
   font-size: var(--text-sm);
   color: var(--clr-plum-dark);
+  font-family: var(--font-sans);
   transition: all var(--dur-fast) var(--ease-smooth);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+textarea.form-control-float {
+  height: auto;
+  padding-top: 1.35rem;
+}
+
+select.form-control-float {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%235C3D3D' viewBox='0 0 24 24'%3E%3Cpath d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.25rem center;
+  background-size: 14px 14px;
+  padding-right: 2.75rem;
+  cursor: pointer;
+}
+
+[dir="rtl"] select.form-control-float {
+  background-position: left 1.25rem center;
+  padding-right: 1.25rem;
+  padding-left: 2.75rem;
+  text-align: right;
+}
+
+[dir="rtl"] .form-control-float {
+  text-align: right;
 }
 
 .form-control-float:focus {
@@ -101,13 +133,19 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--clr-muted);
+  color: var(--clr-text-muted);
   pointer-events: none;
   transition: all var(--dur-fast) var(--ease-smooth);
 }
 
+[dir="rtl"] .form-label-float {
+  left: auto;
+  right: 1.25rem;
+}
+
 .form-control-float:focus ~ .form-label-float,
-.form-control-float:not(:placeholder-shown) ~ .form-label-float {
+.form-control-float:not(:placeholder-shown) ~ .form-label-float,
+select.form-control-float ~ .form-label-float {
   top: 0.35rem;
   font-size: 0.65rem;
   color: var(--clr-rose);
