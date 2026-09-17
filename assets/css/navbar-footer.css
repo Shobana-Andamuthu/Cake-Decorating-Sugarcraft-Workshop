@@ -883,23 +883,8 @@ body.drawer-open, html.drawer-open {
   background: #0D0707 !important;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1080px) and (min-width: 992px) {
-  .navbar-nav {
-    gap: 0.5rem !important;
-    margin-left: 0.5rem !important;
-    margin-right: 0.5rem !important;
-  }
-  .nav-link {
-    font-size: 0.8rem !important;
-    padding: 0.4rem 0 !important;
-  }
-  .navbar-brand-tagline {
-    display: none !important;
-  }
-}
-
-@media (max-width: 991px) {
+/* Responsive adjustments — Tablet & iPad (up to 1199px) Show Menu Toggle Icon */
+@media (max-width: 1199px) {
   .navbar-nav {
     display: none !important;
   }
